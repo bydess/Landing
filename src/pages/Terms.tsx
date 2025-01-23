@@ -4,6 +4,7 @@ import {
   Scale, Lock, Bell, Mail, ArrowRight 
 } from 'lucide-react';
 import { Modal } from '../components/Modal';
+import { ScrollAnimation } from '../components/ScrollAnimation';
 
 export default function Terms() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -166,25 +167,29 @@ export default function Terms() {
       {/* Introduction Section */}
       <section className="relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="flex justify-center mb-6">
-              <div className="bg-[#2f68b4]/10 p-4 rounded-full">
-                <FileText className="w-12 h-12 text-[#2f68b4]" />
+          <ScrollAnimation>
+            <div className="text-center mb-16">
+              <div className="flex justify-center mb-6">
+                <div className="bg-[#2f68b4]/10 p-4 rounded-full">
+                  <FileText className="w-12 h-12 text-[#2f68b4]" />
+                </div>
               </div>
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Terms of Service
+              </h1>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Our commitment to transparency and fair business practices
+              </p>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Terms of Service
-            </h1>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our commitment to transparency and fair business practices
-            </p>
-          </div>
+          </ScrollAnimation>
         </div>
       </section>
 
       {/* Main Terms Sections */}
       <section className="relative py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px Continuing directly from where we left off with the Terms.tsx file:
+
+                8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -278,40 +283,39 @@ export default function Terms() {
                 )
               }
             ].map(({ icon: Icon, title, description, content }) => (
-              <div 
-                key={title}
-                className="blur-effect bg-[#1a1d25]/50 rounded-xl p-8 border border-[#2f68b4]/20 glow card-hover cursor-pointer"
-                onClick={() => openModal(title, content)}
-              >
-                <div className="bg-[#2f68b4]/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                  <Icon className="w-8 h-8 text-[#2f68b4]" />
+              <ScrollAnimation key={title}>
+                <div 
+                  className="blur-effect bg-[#1a1d25]/50 rounded-xl p-8 border border-[#2f68b4]/20 glow card-hover cursor-pointer"
+                  onClick={() => openModal(title, content)}
+                >
+                  <div className="bg-[#2f68b4]/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+                    <Icon className="w-8 h-8 text-[#2f68b4]" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-4">{title}</h3>
+                  <p className="text-gray-300">{description}</p>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{title}</h3>
-                <p className="text-gray-300">{description}</p>
-              </div>
+              </ScrollAnimation>
             ))}
           </div>
         </div>
       </section>
 
-      
-      {/* Add View All Terms Button before the Contact CTA Section */}
+      {/* View Complete Terms Button */}
       <section className="relative py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <button
-              onClick={() => openModal("Complete Terms of Service", fullTermsContent)}
-              className="group bg-[#1a1d25] text-white px-8 py-3 rounded-lg font-semibold text-lg border border-[#2f68b4]/20 hover:bg-[#2f68b4]/10 transition-all duration-300 inline-flex items-center"
-            >
-              View Complete Terms of Service
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </button>
-          </div>
+          <ScrollAnimation>
+            <div className="text-center">
+              <button
+                onClick={() => openModal("Complete Terms of Service", fullTermsContent)}
+                className="group bg-[#1a1d25] text-white px-8 py-3 rounded-lg font-semibold text-lg border border-[#2f68b4]/20 hover:bg-[#2f68b4]/10 transition-all duration-300 inline-flex items-center"
+              >
+                View Complete Terms of Service
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </button>
+            </div>
+          </ScrollAnimation>
         </div>
       </section>
-
-      {/* Previous Contact CTA Section remains unchanged */}
-      {/* ... */}
 
       {/* Modal */}
       <Modal

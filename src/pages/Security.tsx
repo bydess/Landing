@@ -3,7 +3,6 @@ import {
   Shield, Lock, Key, CheckCircle, 
   Mail, Clock, FileCheck, ArrowRight 
 } from 'lucide-react';
-import { ScrollAnimation } from '../components/ScrollAnimation';
 
 export default function Security() {
   const handleContact = (e: React.MouseEvent) => {
@@ -23,22 +22,20 @@ export default function Security() {
       {/* Section 1: Your Security, Our Priority */}
       <section className="relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollAnimation>
-            <div className="text-center mb-16">
-              <div className="flex justify-center mb-6">
-                <div className="bg-[#2f68b4]/10 p-4 rounded-full">
-                  <Shield className="w-12 h-12 text-[#2f68b4]" />
-                </div>
+          <div className="text-center mb-16">
+            <div className="flex justify-center mb-6">
+              <div className="bg-[#2f68b4]/10 p-4 rounded-full">
+                <Shield className="w-12 h-12 text-[#2f68b4]" />
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Your Security, Our Priority
-              </h1>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                At Payzio, we understand the importance of protecting your sensitive data. 
-                That's why we've implemented high level security measures to keep your information safe.
-              </p>
             </div>
-          </ScrollAnimation>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Your Security, Our Priority
+            </h1>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              At Payzio, we understand the importance of protecting your sensitive data. 
+              That's why we've implemented high level security measures to keep your information safe.
+            </p>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
@@ -58,15 +55,13 @@ export default function Security() {
                 description: "We continuously monitor and update our security protocols."
               }
             ].map(({ icon: Icon, title, description }) => (
-              <ScrollAnimation key={title}>
-                <div className="blur-effect bg-[#1a1d25]/50 rounded-xl p-8 border border-[#2f68b4]/20 glow card-hover">
-                  <div className="bg-[#2f68b4]/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                    <Icon className="w-8 h-8 text-[#2f68b4]" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-4">{title}</h3>
-                  <p className="text-gray-300">{description}</p>
+              <div key={title} className="blur-effect bg-[#1a1d25]/50 rounded-xl p-8 border border-[#2f68b4]/20 glow card-hover">
+                <div className="bg-[#2f68b4]/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+                  <Icon className="w-8 h-8 text-[#2f68b4]" />
                 </div>
-              </ScrollAnimation>
+                <h3 className="text-xl font-semibold text-white mb-4">{title}</h3>
+                <p className="text-gray-300">{description}</p>
+              </div>
             ))}
           </div>
         </div>
@@ -76,16 +71,14 @@ export default function Security() {
       <section className="relative py-32">
         <div className="absolute inset-0 blur-effect bg-[#1a1d25]/50" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <ScrollAnimation>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Extra Layers of Protection
-              </h2>
-              <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                We've implemented multiple security features to ensure your account remains protected at all times.
-              </p>
-            </div>
-          </ScrollAnimation>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Extra Layers of Protection
+            </h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              We've implemented multiple security features to ensure your account remains protected at all times.
+            </p>
+          </div>
 
           <div className="max-w-4xl mx-auto">
             <div className="grid gap-6">
@@ -106,17 +99,18 @@ export default function Security() {
                   description: "Granular permissions ensure you have complete control over who can access your data."
                 }
               ].map(({ icon: Icon, title, description }) => (
-                <ScrollAnimation key={title}>
-                  <div className="flex items-start space-x-6 p-6 rounded-xl blur-effect bg-[#1a1d25]/30 border border-[#2f68b4]/10 glow card-hover">
-                    <div className="bg-[#2f68b4]/10 p-4 rounded-xl">
-                      <Icon className="w-6 h-6 text-[#2f68b4]" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
-                      <p className="text-gray-300">{description}</p>
-                    </div>
+                <div 
+                  key={title}
+                  className="flex items-start space-x-6 p-6 rounded-xl blur-effect bg-[#1a1d25]/30 border border-[#2f68b4]/10 glow card-hover"
+                >
+                  <div className="bg-[#2f68b4]/10 p-4 rounded-xl">
+                    <Icon className="w-6 h-6 text-[#2f68b4]" />
                   </div>
-                </ScrollAnimation>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
+                    <p className="text-gray-300">{description}</p>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
@@ -126,17 +120,15 @@ export default function Security() {
       {/* Section 3: Built for Trust and Compliance */}
       <section className="relative py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollAnimation>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Built for Trust and Compliance
-              </h2>
-              <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                Our commitment to security goes beyond basic protection. We adhere to global security 
-                standards and regularly update our systems to address potential vulnerabilities.
-              </p>
-            </div>
-          </ScrollAnimation>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Built for Trust and Compliance
+            </h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              Our commitment to security goes beyond basic protection. We adhere to global security 
+              standards and regularly update our systems to address potential vulnerabilities.
+            </p>
+          </div>
 
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8">
@@ -158,12 +150,13 @@ export default function Security() {
                   answer: "Our security measures are continuously monitored and updated to address new challenges."
                 }
               ].map(({ question, answer }) => (
-                <ScrollAnimation key={question}>
-                  <div className="blur-effect bg-[#1a1d25]/50 rounded-xl p-8 border border-[#2f68b4]/20 glow card-hover">
-                    <h3 className="text-xl font-semibold text-white mb-4">{question}</h3>
-                    <p className="text-gray-300">{answer}</p>
-                  </div>
-                </ScrollAnimation>
+                <div 
+                  key={question}
+                  className="blur-effect bg-[#1a1d25]/50 rounded-xl p-8 border border-[#2f68b4]/20 glow card-hover"
+                >
+                  <h3 className="text-xl font-semibold text-white mb-4">{question}</h3>
+                  <p className="text-gray-300">{answer}</p>
+                </div>
               ))}
             </div>
           </div>
@@ -177,26 +170,24 @@ export default function Security() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] gradient-blur opacity-20" />
         </div>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <ScrollAnimation>
-            <div className="text-center">
-              <h2 className="text-3xl font-bold text-white mb-6">
-                Have Questions About Security?
-              </h2>
-              <p className="text-lg text-gray-300 mb-8">
-                Our security team is available 24/7 to address any concerns and ensure your peace of mind.
-              </p>
-              <button
-                onClick={handleContact}
-                className="group bg-[#2f68b4] text-white px-8 py-3 rounded-lg font-semibold text-lg shadow-lg hover:bg-[#3578c4] transition-all duration-300 glow inline-flex items-center"
-              >
-                Contact Security Team
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <p className="text-sm text-gray-400 mt-4">
-                We typically respond within 24 hours
-              </p>
-            </div>
-          </ScrollAnimation>
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Have Questions About Security?
+            </h2>
+            <p className="text-lg text-gray-300 mb-8">
+              Our security team is available 24/7 to address any concerns and ensure your peace of mind.
+            </p>
+            <button
+              onClick={handleContact}
+              className="group bg-[#2f68b4] text-white px-8 py-3 rounded-lg font-semibold text-lg shadow-lg hover:bg-[#3578c4] transition-all duration-300 glow inline-flex items-center"
+            >
+              Contact Security Team
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </button>
+            <p className="text-sm text-gray-400 mt-4">
+              We typically respond within 24 hours
+            </p>
+          </div>
         </div>
       </section>
     </div>

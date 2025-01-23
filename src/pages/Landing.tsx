@@ -6,7 +6,6 @@ import {
   Smile, ArrowUpRight, ChevronDown, MessageCircle
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { ScrollAnimation } from '../components/ScrollAnimation';
 
 export default function Landing() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -72,50 +71,44 @@ export default function Landing() {
       {/* Hero Section */}
       <div className="relative pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <ScrollAnimation>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
-              Streamline Your Business
-              <span className="block text-[#2f68b4] mt-2">Finances Made Simple</span>
-            </h1>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
+            Streamline Your Business
+            <span className="block text-[#2f68b4] mt-2">Finances Made Simple</span>
+          </h1>
 
-            <p className="max-w-2xl mx-auto text-xl text-gray-300 mb-12">
-              All-in-one platform for managing estimates, invoices, expenses, and mileage tracking. 
-              Perfect for independent contractors and freelancers.
-            </p>
-          </ScrollAnimation>
+          <p className="max-w-2xl mx-auto text-xl text-gray-300 mb-12">
+            All-in-one platform for managing estimates, invoices, expenses, and mileage tracking. 
+            Perfect for independent contractors and freelancers.
+          </p>
 
-          <ScrollAnimation>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto mb-12">
-              {[
-                { icon: FileText, label: "Estimates" },
-                { icon: Receipt, label: "Invoices" },
-                { icon: DollarSign, label: "Expenses" },
-                { icon: Car, label: "Mileage" }
-              ].map(({ icon: Icon, label }) => (
-                <div key={label} className="flex flex-col items-center text-gray-300">
-                  <div className="bg-[#2f68b4]/10 p-4 rounded-xl mb-3 glow card-hover">
-                    <Icon className="w-6 h-6 text-[#2f68b4]" />
-                  </div>
-                  <span className="text-sm">{label}</span>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto mb-12">
+            {[
+              { icon: FileText, label: "Estimates" },
+              { icon: Receipt, label: "Invoices" },
+              { icon: DollarSign, label: "Expenses" },
+              { icon: Car, label: "Mileage" }
+            ].map(({ icon: Icon, label }) => (
+              <div key={label} className="flex flex-col items-center text-gray-300">
+                <div className="bg-[#2f68b4]/10 p-4 rounded-xl mb-3 glow card-hover">
+                  <Icon className="w-6 h-6 text-[#2f68b4]" />
                 </div>
-              ))}
-            </div>
-          </ScrollAnimation>
+                <span className="text-sm">{label}</span>
+              </div>
+            ))}
+          </div>
 
-          <ScrollAnimation>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button
-                onClick={() => handleExternalLink('https://app.payzio.io/signup')}
-                className="group bg-[#2f68b4] text-white px-8 py-3 rounded-lg font-semibold text-lg shadow-lg hover:bg-[#3578c4] transition-all duration-300 glow flex items-center"
-              >
-                Get Started Free
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <p className="text-gray-400 text-sm">
-                7-day free trial • No credit card required
-              </p>
-            </div>
-          </ScrollAnimation>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <button
+              onClick={() => handleExternalLink('https://app.payzio.io/signup')}
+              className="group bg-[#2f68b4] text-white px-8 py-3 rounded-lg font-semibold text-lg shadow-lg hover:bg-[#3578c4] transition-all duration-300 glow flex items-center"
+            >
+              Get Started Free
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </button>
+            <p className="text-gray-400 text-sm">
+              7-day free trial • No credit card required
+            </p>
+          </div>
         </div>
       </div>
 
@@ -123,16 +116,14 @@ export default function Landing() {
       <div className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 blur-effect bg-[#1a1d25]/50" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <ScrollAnimation>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Tired of Financial Software That Holds You Back?
-              </h2>
-              <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                We understand your frustrations. That's why we built Payzio differently.
-              </p>
-            </div>
-          </ScrollAnimation>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Tired of Financial Software That Holds You Back?
+            </h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              We understand your frustrations. That's why we built Payzio differently.
+            </p>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {[
@@ -170,39 +161,35 @@ export default function Landing() {
                 ]
               }
             ].map(({ icon: Icon, title, points }) => (
-              <ScrollAnimation key={title}>
-                <div className="blur-effect bg-[#1a1d25]/50 rounded-xl p-8 glow card-hover border border-[#2f68b4]/20">
-                  <div className="bg-[#2f68b4]/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                    <Icon className="w-8 h-8 text-[#2f68b4]" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-4">{title}</h3>
-                  <ul className="space-y-3">
-                    {points.map((point, index) => (
-                      <li key={index} className="flex items-start space-x-2 text-gray-300">
-                        <div className="w-1.5 h-1.5 rounded-full bg-[#2f68b4] mt-2" />
-                        <span>{point}</span>
-                      </li>
-                    ))}
-                  </ul>
+              <div key={title} className="blur-effect bg-[#1a1d25]/50 rounded-xl p-8 glow card-hover border border-[#2f68b4]/20">
+                <div className="bg-[#2f68b4]/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+                  <Icon className="w-8 h-8 text-[#2f68b4]" />
                 </div>
-              </ScrollAnimation>
+                <h3 className="text-xl font-semibold text-white mb-4">{title}</h3>
+                <ul className="space-y-3">
+                  {points.map((point, index) => (
+                    <li key={index} className="flex items-start space-x-2 text-gray-300">
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#2f68b4] mt-2" />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
           </div>
 
-          <ScrollAnimation>
-            <div className="text-center">
-              <button
-                onClick={() => handleExternalLink('https://app.payzio.io/signup')}
-                className="group bg-[#2f68b4] text-white px-8 py-3 rounded-lg font-semibold text-lg shadow-lg hover:bg-[#3578c4] transition-all duration-300 glow inline-flex items-center"
-              >
-                Try a Better Way
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <p className="text-sm text-gray-400 mt-4">
-                Join thousands of satisfied users who made the switch
-              </p>
-            </div>
-          </ScrollAnimation>
+          <div className="text-center">
+            <button
+              onClick={() => handleExternalLink('https://app.payzio.io/signup')}
+              className="group bg-[#2f68b4] text-white px-8 py-3 rounded-lg font-semibold text-lg shadow-lg hover:bg-[#3578c4] transition-all duration-300 glow inline-flex items-center"
+            >
+              Try a Better Way
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </button>
+            <p className="text-sm text-gray-400 mt-4">
+              Join thousands of satisfied users who made the switch
+            </p>
+          </div>
         </div>
       </div>
 
@@ -210,16 +197,14 @@ export default function Landing() {
       <div className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 blur-effect bg-[#1a1d25]/50" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <ScrollAnimation>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Everything You Need to Succeed
-              </h2>
-              <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                Powerful features designed to help you manage your business finances with ease
-              </p>
-            </div>
-          </ScrollAnimation>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Everything You Need to Succeed
+            </h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              Powerful features designed to help you manage your business finances with ease
+            </p>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
@@ -254,15 +239,13 @@ export default function Landing() {
                 description: "Save time with entries and focus on what matters most, growing your business."
               }
             ].map(({ icon: Icon, title, description }) => (
-              <ScrollAnimation key={title}>
-                <div className="blur-effect bg-[#1a1d25]/50 rounded-xl p-8 glow card-hover border border-[#2f68b4]/20">
-                  <div className="bg-[#2f68b4]/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                    <Icon className="w-8 h-8 text-[#2f68b4]" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-4">{title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{description}</p>
+              <div key={title} className="blur-effect bg-[#1a1d25]/50 rounded-xl p-8 glow card-hover border border-[#2f68b4]/20">
+                <div className="bg-[#2f68b4]/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+                  <Icon className="w-8 h-8 text-[#2f68b4]" />
                 </div>
-              </ScrollAnimation>
+                <h3 className="text-xl font-semibold text-white mb-4">{title}</h3>
+                <p className="text-gray-300 leading-relaxed">{description}</p>
+              </div>
             ))}
           </div>
         </div>
@@ -272,16 +255,14 @@ export default function Landing() {
       <div className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-[#0F1116]" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <ScrollAnimation>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Built for Every Professional
-              </h2>
-              <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                Tailored solutions for every type of self-employed professional
-              </p>
-            </div>
-          </ScrollAnimation>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Built for Every Professional
+            </h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              Tailored solutions for every type of self-employed professional
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {[
@@ -301,18 +282,16 @@ export default function Landing() {
                 description: "Manage expenses and monitor business growth efficiently."
               }
             ].map(({ image, role, description }) => (
-              <ScrollAnimation key={role}>
-                <div className="group relative">
-                  <div className="relative h-64 overflow-hidden rounded-xl blur-effect bg-[#1a1d25]/50 border border-[#2f68b4]/20 glow card-hover">
-                    <img src={image} alt={role} className="w-full h-full object-cover opacity-50 group-hover:opacity-60 transition-opacity duration-300" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0F1116] via-[#0F1116]/70 to-transparent" />
-                    <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                      <h3 className="text-xl font-semibold text-white mb-2">{role}</h3>
-                      <p className="text-gray-300">{description}</p>
-                    </div>
+              <div key={role} className="group relative">
+                <div className="relative h-64 overflow-hidden rounded-xl blur-effect bg-[#1a1d25]/50 border border-[#2f68b4]/20 glow card-hover">
+                  <img src={image} alt={role} className="w-full h-full object-cover opacity-50 group-hover:opacity-60 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0F1116] via-[#0F1116]/70 to-transparent" />
+                  <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                    <h3 className="text-xl font-semibold text-white mb-2">{role}</h3>
+                    <p className="text-gray-300">{description}</p>
                   </div>
                 </div>
-              </ScrollAnimation>
+              </div>
             ))}
           </div>
 
@@ -329,18 +308,16 @@ export default function Landing() {
                 description: "Monitor expenses and cash flow for your personal projects."
               }
             ].map(({ image, role, description }) => (
-              <ScrollAnimation key={role}>
-                <div className="group relative">
-                  <div className="relative h-64 overflow-hidden rounded-xl blur-effect bg-[#1a1d25]/50 border border-[#2f68b4]/20 glow card-hover">
-                    <img src={image} alt={role} className="w-full h-full object-cover opacity-50 group-hover:opacity-60 transition-opacity duration-300" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0F1116] via-[#0F1116]/70 to-transparent" />
-                    <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                      <h3 className="text-xl font-semibold text-white mb-2">{role}</h3>
-                      <p className="text-gray-300">{description}</p>
-                    </div>
+              <div key={role} className="group relative">
+                <div className="relative h-64 overflow-hidden rounded-xl blur-effect bg-[#1a1d25]/50 border border-[#2f68b4]/20 glow card-hover">
+                  <img src={image} alt={role} className="w-full h-full object-cover opacity-50 group-hover:opacity-60 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0F1116] via-[#0F1116]/70 to-transparent" />
+                  <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                    <h3 className="text-xl font-semibold text-white mb-2">{role}</h3>
+                    <p className="text-gray-300">{description}</p>
                   </div>
                 </div>
-              </ScrollAnimation>
+              </div>
             ))}
           </div>
         </div>
@@ -350,16 +327,14 @@ export default function Landing() {
       <div className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 blur-effect bg-[#1a1d25]/50" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <ScrollAnimation>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose PAYZIO?
-              </h2>
-              <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                Built with self-employed professionals in mind, our platform combines simplicity with powerful features
-              </p>
-            </div>
-          </ScrollAnimation>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose PAYZIO?
+            </h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              Built with self-employed professionals in mind, our platform combines simplicity with powerful features
+            </p>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -379,15 +354,13 @@ export default function Landing() {
                 description: "From solo freelancer to small business owner, our platform scales seamlessly as your business expands."
               }
             ].map(({ icon: Icon, title, description }) => (
-              <ScrollAnimation key={title}>
-                <div className="blur-effect bg-[#1a1d25]/50 rounded-xl p-8 glow card-hover border border-[#2f68b4]/20">
-                  <div className="bg-[#2f68b4]/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-                    <Icon className="w-8 h-8 text-[#2f68b4]" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-4 text-center">{title}</h3>
-                  <p className="text-gray-300 leading-relaxed text-center">{description}</p>
+              <div key={title} className="blur-effect bg-[#1a1d25]/50 rounded-xl p-8 glow card-hover border border-[#2f68b4]/20">
+                <div className="bg-[#2f68b4]/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                  <Icon className="w-8 h-8 text-[#2f68b4]" />
                 </div>
-              </ScrollAnimation>
+                <h3 className="text-xl font-semibold text-white mb-4 text-center">{title}</h3>
+                <p className="text-gray-300 leading-relaxed text-center">{description}</p>
+              </div>
             ))}
           </div>
         </div>
@@ -397,61 +370,56 @@ export default function Landing() {
       <div className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 blur-effect bg-[#1a1d25]/50" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <ScrollAnimation>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-lg text-gray-300">
-                Find answers to common questions about Payzio
-              </p>
-            </div>
-          </ScrollAnimation>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-lg text-gray-300">
+              Find answers to common questions about Payzio
+            </p>
+          </div>
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <ScrollAnimation key={index}>
-                <div
-                  className="blur-effect bg-[#1a1d25]/50 rounded-xl border border-[#2f68b4]/20 overflow-hidden transition-all duration-300"
+              <div
+                key={index}
+                className="blur-effect bg-[#1a1d25]/50 rounded-xl border border-[#2f68b4]/20 overflow-hidden transition-all duration-300"
+              >
+                <button
+                  onClick={() => toggleFaq(index)}
+                  className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-[#2f68b4]/10 transition-colors"
                 >
-                  <button
-                    onClick={() => toggleFaq(index)}
-                    className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-[#2f68b4]/10 transition-colors"
-                  >
-                    <span className="text-white font-medium">{faq.question}</span>
-                    <ChevronDown
-                      className={`w-5 h-5 text-[#2f68b4] transition-transform duration-300 ${
-                        openFaq === index ? 'rotate-180' : ''
-                      }`}
-                    />
-                  </button>
-                  <div
-                    className={`px-6 transition-all duration-300 ${
-                      openFaq === index ? 'py-4' : 'h-0 overflow-hidden'
+                  <span className="text-white font-medium">{faq.question}</span>
+                  <ChevronDown
+                    className={`w-5 h-5 text-[#2f68b4] transition-transform duration-300 ${
+                      openFaq === index ? 'rotate-180' : ''
                     }`}
-                  >
-                    <p className="text-gray-300">{faq.answer}</p>
-                  </div>
+                  />
+                </button>
+                <div
+                  className={`px-6 transition-all duration-300 ${
+                    openFaq === index ? 'py-4' : 'h-0 overflow-hidden'
+                  }`}
+                >
+                  <p className="text-gray-300">{faq.answer}</p>
                 </div>
-              </ScrollAnimation>
+              </div>
             ))}
           </div>
 
-          <ScrollAnimation>
-            <div className="mt-12 text-center">
-              <div className="inline-flex flex-col items-center">
-                <p className="text-gray-300 mb-4">Still have questions?</p>
-                <button
-                  onClick={() => handleExternalLink('mailto:support@payzio.io')}
-                  className="group bg-[#1a1d25] text-white px-8 py-3 rounded-lg font-semibold border border-[#2f68b4]/20 hover:bg-[#2f68b4]/10 transition-all duration-300 inline-flex items-center"
-                >
-                  <MessageCircle className="w-5 h-5 mr-2" />
-                  Contact Support
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </button>
-              </div>
+          <div className="mt-12 text-center">
+            <div className="inline-flex flex-col items-center">
+              <p className="text-gray-300 mb-4">Still have questions?</p>
+              <button
+                onClick={() => handleExternalLink('mailto:support@payzio.io')}
+                className="group bg-[#1a1d25] text-white px-8 py-3 rounded-lg font-semibold border border-[#2f68b4]/20 hover:bg-[#2f68b4]/10 transition-all duration-300 inline-flex items-center"
+              >
+                <MessageCircle className="w-5 h-5 mr-2" />
+                Contact Support
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </button>
             </div>
-          </ScrollAnimation>
+          </div>
         </div>
       </div>
 
@@ -462,26 +430,24 @@ export default function Landing() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] gradient-blur opacity-20" />
         </div>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <ScrollAnimation>
-            <div className="text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Financial Management?
-              </h2>
-              <p className="text-lg text-gray-300 mb-8">
-                Join other self-employed professionals who have simplified their business finances with PAYZIO.
-              </p>
-              <button
-                onClick={() => handleExternalLink('https://app.payzio.io/signup')}
-                className="group bg-[#2f68b4] text-white px-8 py-3 rounded-lg font-semibold text-lg shadow-lg hover:bg-[#3578c4] transition-all duration-300 glow inline-flex items-center"
-              >
-                Try It Free Today
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <p className="text-sm text-gray-400 mt-4">
-                No credit card required • 7-day free trial • Cancel anytime
-              </p>
-            </div>
-          </ScrollAnimation>
+          <div className="text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Financial Management?
+            </h2>
+            <p className="text-lg text-gray-300 mb-8">
+              Join other self-employed professionals who have simplified their business finances with PAYZIO.
+            </p>
+            <button
+              onClick={() => handleExternalLink('https://app.payzio.io/signup')}
+              className="group bg-[#2f68b4] text-white px-8 py-3 rounded-lg font-semibold text-lg shadow-lg hover:bg-[#3578c4] transition-all duration-300 glow inline-flex items-center"
+            >
+              Try It Free Today
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </button>
+            <p className="text-sm text-gray-400 mt-4">
+              No credit card required • 7-day free trial • Cancel anytime
+            </p>
+          </div>
         </div>
       </div>
     </div>

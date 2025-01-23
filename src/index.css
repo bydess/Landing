@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#0F1116];
+  }
+}
+
+@layer utilities {
+  .glow {
+    box-shadow: 0 0 25px rgba(0, 157, 255, 0.15);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+  .glow:hover {
+    box-shadow: 0 0 35px rgba(0, 157, 255, 0.25);
+  }
+
+  .blur-effect {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transform: translateZ(0);
+  }
+
+  .gradient-blur {
+    background: radial-gradient(circle at center, rgba(47, 104, 180, 0.15) 0%, rgba(47, 104, 180, 0) 70%);
+  }
+
+  .card-hover {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-2px);
+  }
+}

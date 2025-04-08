@@ -50,7 +50,7 @@ export default function Pricing() {
                   onClick={() => handleExternalLink('https://app.payzio.io/signup')}
                   className="w-full bg-[#2f68b4] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#3578c4] transition-all duration-300 glow flex items-center justify-center"
                 >
-                  Start Free Trial
+                  Let’s Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>

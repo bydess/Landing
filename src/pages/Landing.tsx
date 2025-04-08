@@ -102,11 +102,12 @@ export default function Landing() {
               onClick={() => handleExternalLink('https://app.payzio.io/signup')}
               className="group bg-[#2f68b4] text-white px-8 py-3 rounded-lg font-semibold text-lg shadow-lg hover:bg-[#3578c4] transition-all duration-300 glow flex items-center"
             >
-              Get Started Free
+             Simplify Your Business Now
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </button>
             <p className="text-gray-400 text-sm">
-              7-day free trial • No credit card required
+            No hidden fees • 7 days for $1.99 • Cancel anytime
+
             </p>
           </div>
         </div>
@@ -441,11 +442,12 @@ export default function Landing() {
               onClick={() => handleExternalLink('https://app.payzio.io/signup')}
               className="group bg-[#2f68b4] text-white px-8 py-3 rounded-lg font-semibold text-lg shadow-lg hover:bg-[#3578c4] transition-all duration-300 glow inline-flex items-center"
             >
-              Try It Free Today
+              Unlock Your Trial
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </button>
             <p className="text-sm text-gray-400 mt-4">
-              No credit card required • 7-day free trial • Cancel anytime
+            No hidden fees • 7 days for $1.99 • Cancel anytime
+
             </p>
           </div>
         </div>

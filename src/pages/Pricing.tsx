@@ -120,7 +120,7 @@ export default function Pricing() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-6">
-              Try Payzio Risk-Free for 7 Days
+              Try Payzio for 7 Days
             </h2>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
               Not sure if Payzio is the right fit? Take it for a spin with our 7-day free trial. 
@@ -130,7 +130,7 @@ export default function Pricing() {
               onClick={() => handleExternalLink('https://app.payzio.io/signup')}
               className="group bg-[#2f68b4] text-white px-8 py-3 rounded-lg font-semibold text-lg shadow-lg hover:bg-[#3578c4] transition-all duration-300 glow inline-flex items-center"
             >
-              Start My Free Trial
+              Start My Trial
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </button>
             <p className="text-sm text-gray-400 mt-4">

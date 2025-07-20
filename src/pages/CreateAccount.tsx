@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { SEO } from '../components/SEO';
 import { Link } from 'react-router-dom';
 import { Wallet, ArrowLeft } from 'lucide-react';
 
@@ -14,6 +15,13 @@ export default function CreateAccount() {
   };
 
   return (
+    <>
+      <SEO 
+        title="Create PAYZIO Account - Start Your Free Trial"
+        description="Create your PAYZIO account and start your 7-day free trial. Join thousands of self-employed professionals managing their finances with ease."
+        keywords="create payzio account, sign up, free trial, business finance registration, freelancer account setup"
+        url="https://payzio.io/create-account"
+      />
     <div className="min-h-screen bg-gradient-to-br from-[#003366] via-[#004080] to-[#0066cc] flex flex-col items-center justify-center px-4">
       <div className="max-w-md w-full bg-white rounded-xl shadow-xl p-8">
         <div className="text-center mb-8">
@@ -109,5 +117,6 @@ export default function CreateAccount() {
         Back to home
       </Link>
     </div>
+    </>
   );
 }

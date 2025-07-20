@@ -1,4 +1,5 @@
 import React from 'react';
+import { SEO } from '../components/SEO';
 import { 
   FileText, DollarSign, Receipt, Calculator, 
   Car, Clock, ArrowRight, Check
@@ -10,6 +11,32 @@ export default function Features() {
   };
 
   return (
+    <>
+      <SEO 
+        title="PAYZIO Features - Complete Financial Management Tools"
+        description="Discover PAYZIO's powerful features: invoice creation, expense tracking, mileage management, and tax preparation tools. Perfect for freelancers and small businesses."
+        keywords="payzio features, invoice creation, expense tracking, mileage tracking, tax preparation, financial reports, business finance tools, freelancer features"
+        url="https://payzio.io/features"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "PAYZIO Features",
+          "description": "Complete overview of PAYZIO's financial management features for self-employed professionals.",
+          "url": "https://payzio.io/features",
+          "mainEntity": {
+            "@type": "SoftwareApplication",
+            "name": "PAYZIO",
+            "featureList": [
+              "Professional Invoice Creation",
+              "Expense Tracking and Management",
+              "Mileage and Vehicle Tracking",
+              "Tax Preparation Tools",
+              "Financial Reports and Analytics",
+              "Self-Payment Tracking"
+            ]
+          }
+        }}
+      />
     <div className="min-h-screen bg-[#0F1116] relative overflow-hidden pt-32">
       {/* Background Gradient Blurs */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
@@ -175,5 +202,6 @@ export default function Features() {
         </div>
       </section>
     </div>
+    </>
   );
 }

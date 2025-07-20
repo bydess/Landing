@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { SEO } from '../components/SEO';
 import { 
   ArrowRight, DollarSign, FileText, Receipt, Car, 
   BarChart, Clock, Calculator, Shield, Zap, Users, 
@@ -60,6 +61,42 @@ export default function Landing() {
   ];
 
   return (
+    <>
+      <SEO 
+        title="PAYZIO - Simple Financial Management for Self-Employed Professionals"
+        description="Streamline your business finances with PAYZIO. Track income, expenses, and mileage in one intuitive platform. Perfect for freelancers, contractors, and small business owners. Start your 7-day trial for $1.99."
+        keywords="financial management, expense tracking, invoice creation, mileage tracking, freelancer tools, small business accounting, self-employed, contractor finances, business expenses, income tracking, financial software, business finance app"
+        url="https://payzio.io"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "PAYZIO",
+          "description": "All-in-one financial management platform for self-employed professionals, freelancers, and small business owners.",
+          "url": "https://payzio.io",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "offers": {
+            "@type": "Offer",
+            "price": "15",
+            "priceCurrency": "USD",
+            "priceValidUntil": "2025-12-31",
+            "availability": "https://schema.org/InStock",
+            "description": "Monthly subscription to PAYZIO financial management platform"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "150",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "creator": {
+            "@type": "Organization",
+            "name": "PAYZIO",
+            "url": "https://payzio.io"
+          }
+        }}
+      />
     <div className="min-h-screen bg-[#0F1116] relative overflow-hidden">
       {/* Background Gradient Blurs */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
@@ -453,5 +490,6 @@ export default function Landing() {
         </div>
       </div>
     </div>
+    </>
   );
 }

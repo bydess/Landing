@@ -89,6 +89,14 @@ export function SEO({
       <meta name="googlebot" content="index, follow" />
       <meta name="bingbot" content="index, follow" />
       
+      {/* Additional SEO Meta Tags */}
+      <meta name="language" content="en" />
+      <meta name="geo.region" content="US" />
+      <meta name="geo.placename" content="United States" />
+      <meta name="distribution" content="global" />
+      <meta name="rating" content="general" />
+      <meta name="referrer" content="origin-when-cross-origin" />
+      
       {/* Mobile and Responsive */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#2f68b4" />
@@ -110,6 +118,18 @@ export function SEO({
       {/* DNS Prefetch */}
       <link rel="dns-prefetch" href="//app.payzio.io" />
       <link rel="dns-prefetch" href="//analytics.google.com" />
+      
+      {/* Additional Performance Optimizations */}
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" />
+      <link rel="preconnect" href="https://www.google-analytics.com" />
+      
+      {/* Favicon and App Icons */}
+      <link rel="apple-touch-icon" sizes="180x180" href="https://i.imgur.com/MsVM8ey.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="https://i.imgur.com/MsVM8ey.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="https://i.imgur.com/MsVM8ey.png" />
+      <link rel="manifest" href="/site.webmanifest" />
+      <meta name="msapplication-TileColor" content="#2f68b4" />
+      <meta name="msapplication-config" content="/browserconfig.xml" />
     </Helmet>
   );
 }

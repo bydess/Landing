@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { SEO } from '../components/SEO';
 import { 
   Cookie, Shield, Settings, BarChart, 
   Clock, Globe, ArrowRight 
@@ -163,6 +164,29 @@ export default function Cookies() {
   );
 
   return (
+    <>
+      <SEO 
+        title="PAYZIO Cookie Policy - How We Use Cookies"
+        description="Learn about PAYZIO's cookie usage, including essential, functional, and analytics cookies. Understand your choices and how to manage cookie preferences."
+        keywords="payzio cookie policy, cookies, website tracking, privacy settings, cookie preferences, web analytics, user experience"
+        url="https://payzio.io/cookies"
+        type="article"
+        publishedTime="2024-03-15T00:00:00Z"
+        modifiedTime="2024-03-15T00:00:00Z"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "PAYZIO Cookie Policy",
+          "description": "Detailed information about how PAYZIO uses cookies and similar technologies.",
+          "url": "https://payzio.io/cookies",
+          "datePublished": "2024-03-15",
+          "dateModified": "2024-03-15",
+          "publisher": {
+            "@type": "Organization",
+            "name": "PAYZIO"
+          }
+        }}
+      />
     <div className="min-h-screen bg-[#0F1116] relative overflow-hidden pt-32">
       {/* Background Gradient Blurs */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
@@ -328,5 +352,6 @@ export default function Cookies() {
         {modalContent.content}
       </Modal>
     </div>
+    </>
   );
 }

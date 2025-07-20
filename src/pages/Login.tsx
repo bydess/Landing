@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { SEO } from '../components/SEO';
 import { Link } from 'react-router-dom';
 import { Wallet, ArrowLeft } from 'lucide-react';
 
@@ -13,6 +14,13 @@ export default function Login() {
   };
 
   return (
+    <>
+      <SEO 
+        title="Login to PAYZIO - Access Your Financial Dashboard"
+        description="Sign in to your PAYZIO account to manage your business finances, track expenses, create invoices, and access your financial reports."
+        keywords="payzio login, sign in, financial dashboard, business finance login, expense tracking login"
+        url="https://payzio.io/login"
+      />
     <div className="min-h-screen bg-gradient-to-br from-[#003366] via-[#004080] to-[#0066cc] flex flex-col items-center justify-center px-4">
       <div className="max-w-md w-full bg-white rounded-xl shadow-xl p-8">
         <div className="text-center mb-8">
@@ -92,5 +100,6 @@ export default function Login() {
         Back to home
       </Link>
     </div>
+    </>
   );
 }

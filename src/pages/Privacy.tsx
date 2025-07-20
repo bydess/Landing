@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { SEO } from '../components/SEO';
 import { 
   Shield, Lock, Eye, FileText, 
   Cookie, Bell, Mail, ArrowRight 
@@ -151,6 +152,29 @@ export default function Privacy() {
   );
 
   return (
+    <>
+      <SEO 
+        title="PAYZIO Privacy Policy - How We Protect Your Information"
+        description="Read PAYZIO's comprehensive privacy policy. Learn how we collect, use, and protect your personal and business information with transparency and care."
+        keywords="payzio privacy policy, data protection, privacy rights, information security, gdpr compliance, data collection, user privacy"
+        url="https://payzio.io/privacy"
+        type="article"
+        publishedTime="2024-03-15T00:00:00Z"
+        modifiedTime="2024-03-15T00:00:00Z"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "PrivacyPolicy",
+          "name": "PAYZIO Privacy Policy",
+          "description": "Comprehensive privacy policy outlining how PAYZIO handles user data and protects privacy.",
+          "url": "https://payzio.io/privacy",
+          "datePublished": "2024-03-15",
+          "dateModified": "2024-03-15",
+          "publisher": {
+            "@type": "Organization",
+            "name": "PAYZIO"
+          }
+        }}
+      />
     <div className="min-h-screen bg-[#0F1116] relative overflow-hidden pt-32">
       {/* Background Gradient Blurs */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
@@ -323,5 +347,6 @@ export default function Privacy() {
         {modalContent.content}
       </Modal>
     </div>
+    </>
   );
 }

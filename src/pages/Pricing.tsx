@@ -1,4 +1,5 @@
 import React from 'react';
+import { SEO } from '../components/SEO';
 import { Check, ArrowRight } from 'lucide-react';
 
 export default function Pricing() {
@@ -16,6 +17,38 @@ export default function Pricing() {
   ];
 
   return (
+    <>
+      <SEO 
+        title="PAYZIO Pricing - Simple, Transparent Financial Management Plans"
+        description="Choose from PAYZIO's simple pricing plans: $15/month or $150/year. No hidden fees, all features included. Start your 7-day free trial today."
+        keywords="payzio pricing, financial management pricing, business finance cost, freelancer tools pricing, expense tracking cost, invoice software pricing"
+        url="https://payzio.io/pricing"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "PricingPage",
+          "name": "PAYZIO Pricing",
+          "description": "Simple, transparent pricing for PAYZIO financial management platform.",
+          "url": "https://payzio.io/pricing",
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Monthly Plan",
+              "price": "15",
+              "priceCurrency": "USD",
+              "billingIncrement": "P1M",
+              "description": "Monthly subscription with all features included"
+            },
+            {
+              "@type": "Offer",
+              "name": "Yearly Plan",
+              "price": "150",
+              "priceCurrency": "USD",
+              "billingIncrement": "P1Y",
+              "description": "Annual subscription with 2 months free"
+            }
+          ]
+        }}
+      />
     <div className="min-h-screen bg-[#0F1116] relative overflow-hidden pt-32">
       {/* Background Gradient Blurs */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
@@ -140,5 +173,6 @@ export default function Pricing() {
         </div>
       </section>
     </div>
+    </>
   );
 }

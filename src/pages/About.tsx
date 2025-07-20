@@ -1,4 +1,5 @@
 import React from 'react';
+import { SEO } from '../components/SEO';
 import { 
   ArrowRight, Users, DollarSign, Sparkles, 
   Target, Scale, Heart
@@ -13,6 +14,28 @@ export default function About() {
   };
   
   return (
+    <>
+      <SEO 
+        title="About PAYZIO - Simple Financial Management for Self-Employed"
+        description="Learn about PAYZIO's mission to simplify business finances for freelancers and small business owners. Discover our story, values, and commitment to transparent pricing."
+        keywords="about payzio, financial management company, freelancer tools, small business finance, transparent pricing, business finance software"
+        url="https://payzio.io/about"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          "name": "About PAYZIO",
+          "description": "Learn about PAYZIO's mission to simplify business finances for self-employed professionals.",
+          "url": "https://payzio.io/about",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "PAYZIO",
+            "description": "Financial management platform for self-employed professionals",
+            "url": "https://payzio.io",
+            "foundingDate": "2024",
+            "mission": "To simplify financial management for self-employed professionals with transparent, affordable tools."
+          }
+        }}
+      />
     <div className="min-h-screen bg-[#0F1116] relative overflow-hidden pt-32">
       {/* Background Gradient Blurs */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
@@ -197,5 +220,6 @@ export default function About() {
         </div>
       </section>
     </div>
+    </>
   );
 }

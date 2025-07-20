@@ -1,4 +1,5 @@
 import React from 'react';
+import { SEO } from '../components/SEO';
 import { 
   Shield, Lock, Key, CheckCircle, 
   Mail, Clock, FileCheck, ArrowRight 
@@ -11,6 +12,31 @@ export default function Security() {
   };
 
   return (
+    <>
+      <SEO 
+        title="PAYZIO Security - Bank-Level Protection for Your Financial Data"
+        description="Learn about PAYZIO's comprehensive security measures: end-to-end encryption, multi-factor authentication, and regular security audits to protect your business data."
+        keywords="payzio security, financial data protection, encryption, multi-factor authentication, secure financial software, business data security, privacy protection"
+        url="https://payzio.io/security"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "PAYZIO Security",
+          "description": "Comprehensive security measures and data protection protocols used by PAYZIO.",
+          "url": "https://payzio.io/security",
+          "mainEntity": {
+            "@type": "SecurityPolicy",
+            "name": "PAYZIO Security Measures",
+            "securityFeatures": [
+              "AES-256 Encryption",
+              "Multi-Factor Authentication",
+              "Regular Security Audits",
+              "Secure Data Storage",
+              "One-Time Passwords (OTP)"
+            ]
+          }
+        }}
+      />
     <div className="min-h-screen bg-[#0F1116] relative overflow-hidden pt-32">
       {/* Background Gradient Blurs */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
@@ -191,5 +217,6 @@ export default function Security() {
         </div>
       </section>
     </div>
+    </>
   );
 }

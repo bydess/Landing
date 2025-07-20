@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { SEO } from '../components/SEO';
 import { 
   FileText, UserCheck, Shield, DollarSign, 
   Scale, Lock, Bell, Mail, ArrowRight 
@@ -155,6 +156,29 @@ export default function Terms() {
   );
 
   return (
+    <>
+      <SEO 
+        title="PAYZIO Terms of Service - Legal Terms and Conditions"
+        description="Read PAYZIO's terms of service. Understand your rights and responsibilities when using our financial management platform for your business."
+        keywords="payzio terms of service, legal terms, user agreement, service conditions, business software terms, user responsibilities"
+        url="https://payzio.io/terms"
+        type="article"
+        publishedTime="2024-03-15T00:00:00Z"
+        modifiedTime="2024-03-15T00:00:00Z"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "TermsOfService",
+          "name": "PAYZIO Terms of Service",
+          "description": "Legal terms and conditions governing the use of PAYZIO financial management platform.",
+          "url": "https://payzio.io/terms",
+          "datePublished": "2024-03-15",
+          "dateModified": "2024-03-15",
+          "publisher": {
+            "@type": "Organization",
+            "name": "PAYZIO"
+          }
+        }}
+      />
     <div className="min-h-screen bg-[#0F1116] relative overflow-hidden pt-32">
       {/* Background Gradient Blurs */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
@@ -322,5 +346,6 @@ export default function Terms() {
         {modalContent.content}
       </Modal>
     </div>
+    </>
   );
 }

@@ -39,7 +39,7 @@ export function SEO({
     "offers": {
       "@type": "Offer",
       "price": "15",
-      "priceCurrency": "USD",
+      "priceCurrency": "CAD",
       "priceValidUntil": "2025-12-31",
       "availability": "https://schema.org/InStock",
       "description": "Monthly subscription to PAYZIO financial management platform"
@@ -91,8 +91,8 @@ export function SEO({
       
       {/* Additional SEO Meta Tags */}
       <meta name="language" content="en" />
-      <meta name="geo.region" content="US" />
-      <meta name="geo.placename" content="United States" />
+      <meta name="geo.region" content="CA" />
+      <meta name="geo.placename" content="Canada" />
       <meta name="distribution" content="global" />
       <meta name="rating" content="general" />
       <meta name="referrer" content="origin-when-cross-origin" />

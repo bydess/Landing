@@ -5,7 +5,13 @@ import { HelmetProvider } from 'react-helmet-async';
 import App from './App';
 import './index.css';
 
-createRoot(document.getElementById('root')!).render(
+// Ensure proper hydration for SSG
+const container = document.getElementById('root');
+if (!container) throw new Error('Root element not found');
+
+const root = createRoot(container);
+
+root.render(
   <StrictMode>
     <HelmetProvider>
       <Router>

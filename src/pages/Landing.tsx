@@ -483,7 +483,7 @@ export default function Landing() {
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </button>
             <p className="text-sm text-gray-400 mt-4">
-            No hidden fees • 7 days for $1.99 • Cancel anytime
+            No hidden fees • 7 days for free • Cancel anytime
 
             </p>
           </div>

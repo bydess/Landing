@@ -188,14 +188,14 @@ export default function Features() {
               Join PAYZIO and experience the smarter way to manage your money.
             </p>
             <button
-              onClick={() => handleExternalLink('https://app.payzio.io/signup')}
+              onClick={() => (window.location.href = 'https://app.payzio.io/auth')}
               className="group bg-[#2f68b4] text-white px-8 py-3 rounded-lg font-semibold text-lg shadow-lg hover:bg-[#3578c4] transition-all duration-300 glow inline-flex items-center"
             >
               See It in Action
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </button>
             <p className="text-sm text-gray-400 mt-4">
-            No hidden fees • 7 days for $1.99 • Cancel anytime
+            No hidden fees • 7 days for free • Cancel anytime
 
             </p>
           </div>

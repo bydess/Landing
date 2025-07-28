@@ -136,7 +136,7 @@ export default function Landing() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
-              onClick={() => handleExternalLink('https://app.payzio.io/auth')}
+               onClick={() => (window.location.href = 'https://app.payzio.io/signup')}
               className="group bg-[#2f68b4] text-white px-8 py-3 rounded-lg font-semibold text-lg shadow-lg hover:bg-[#3578c4] transition-all duration-300 glow flex items-center"
             >
              Simplify Your Business Now

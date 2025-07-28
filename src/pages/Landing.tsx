@@ -143,7 +143,7 @@ export default function Landing() {
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </button>
             <p className="text-gray-400 text-sm">
-            No hidden fees • 7 days for $1.99 • Cancel anytime
+            No hidden fees • 7 days for free • Cancel anytime
 
             </p>
           </div>
@@ -476,7 +476,7 @@ export default function Landing() {
               Join other self-employed professionals who have simplified their business finances with PAYZIO.
             </p>
             <button
-              onClick={() => handleExternalLink('https://app.payzio.io/signup')}
+              onClick={() => handleExternalLink('https://app.payzio.io/auth')}
               className="group bg-[#2f68b4] text-white px-8 py-3 rounded-lg font-semibold text-lg shadow-lg hover:bg-[#3578c4] transition-all duration-300 glow inline-flex items-center"
             >
               Unlock Your Trial

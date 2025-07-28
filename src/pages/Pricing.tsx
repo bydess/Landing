@@ -80,7 +80,7 @@ export default function Pricing() {
                 </div>
                 <p className="text-gray-300 mb-6">Perfect for flexibility</p>
                 <button
-                  onClick={() => handleExternalLink('https://app.payzio.io/signup')}
+                  onClick={() => (window.location.href = 'https://app.payzio.io/auth')}
                   className="w-full bg-[#2f68b4] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#3578c4] transition-all duration-300 glow flex items-center justify-center"
                 >
                   Let’s Get Started
@@ -102,7 +102,7 @@ export default function Pricing() {
                 </div>
                 <p className="text-gray-300 mb-6">2 months free!</p>
                 <button
-                  onClick={() => handleExternalLink('https://app.payzio.io/auth')}
+                  onClick={() => (window.location.href = 'https://app.payzio.io/auth')}
                   className="w-full bg-[#2f68b4] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#3578c4] transition-all duration-300 glow flex items-center justify-center"
                 >
                   Let’s Get Started
@@ -160,7 +160,7 @@ export default function Pricing() {
               Experience all the features before you commit—no credit card required.
             </p>
             <button
-              onClick={() => handleExternalLink('https://app.payzio.io/signup')}
+              onClick={() => (window.location.href = 'https://app.payzio.io/auth')}
               className="group bg-[#2f68b4] text-white px-8 py-3 rounded-lg font-semibold text-lg shadow-lg hover:bg-[#3578c4] transition-all duration-300 glow inline-flex items-center"
             >
               Start My Trial

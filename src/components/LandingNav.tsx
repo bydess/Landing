@@ -107,7 +107,7 @@ export function LandingNav() {
                 Login
               </button>
               <button
-                onClick={() => handleExternalLink('https://app.payzio.io/signup')}
+                onClick={() => handleExternalLink('https://app.payzio.io/auth')}
                 className="block w-full text-left px-4 py-2 text-gray-300 hover:text-white hover:bg-[#2f68b4]/10 transition-colors"
               >
                 Get Started

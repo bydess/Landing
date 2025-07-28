@@ -207,7 +207,7 @@ export default function About() {
               Experience the simplicity of modern financial management designed for real people.
             </p>
             <button
-              onClick={() => handleExternalLink('https://app.payzio.io/auth')}
+              onClick={() => (window.location.href = 'https://app.payzio.io/auth')}
               className="group bg-[#2f68b4] text-white px-8 py-3 rounded-lg font-semibold text-lg shadow-lg hover:bg-[#3578c4] transition-all duration-300 glow inline-flex items-center"
             >
               Start Your Free Trial

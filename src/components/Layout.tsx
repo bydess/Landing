@@ -168,5 +168,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
         }
       `}</style>
     </div>
+    </div>
   );
 }

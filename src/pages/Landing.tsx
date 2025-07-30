@@ -108,25 +108,26 @@ export default function Landing() {
 </div>
 
 
-     {/* Hero Section */}
-<div className="relative pt-32 pb-20 bg-white overflow-hidden">
+      {/* Hero Section */}
+<div className="relative pt-32 pb-20 bg-[#0F1116] overflow-hidden text-white">
   {/* Blobs */}
   <div className="absolute inset-0 pointer-events-none z-0">
-    <div className="absolute top-10 left-1/3 w-56 h-56 bg-blue-500 rounded-full filter blur-3xl opacity-20 animate-float" />
-    <div className="absolute top-1/2 right-1/4 w-40 h-40 bg-cyan-500 rounded-full filter blur-2xl opacity-20 animate-float-slow" />
-    <div className="absolute bottom-10 left-1/4 w-52 h-52 bg-blue-500 rounded-full filter blur-3xl opacity-15 animate-float-reverse" />
+    <div className="absolute top-10 left-1/3 w-40 h-40 bg-blue-500 rounded-full filter blur-2xl opacity-30 animate-float" />
+    <div className="absolute top-[30%] right-1/4 w-28 h-28 bg-cyan-500 rounded-full filter blur-xl opacity-20 animate-float-slow" />
+    <div className="absolute bottom-10 left-1/4 w-36 h-36 bg-blue-500 rounded-full filter blur-2xl opacity-25 animate-float-reverse" />
+    <div className="absolute bottom-[20%] right-[20%] w-24 h-24 bg-blue-500 rounded-full filter blur-2xl opacity-20 animate-float" />
   </div>
 
   {/* Content */}
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-    <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 mb-6 tracking-tight">
+    <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
       Manage Your Business with Ease
       <span className="block bg-gradient-to-r from-blue-500 to-cyan-500 text-transparent bg-clip-text mt-2">
         Finances Made Simple
       </span>
     </h1>
 
-    <p className="max-w-2xl mx-auto text-xl text-gray-600 mb-12">
+    <p className="max-w-2xl mx-auto text-xl text-gray-400 mb-12">
       Everything you need to run your business — from quotes and invoices to tracking expenses and mileage — in one place.
     </p>
 
@@ -137,9 +138,9 @@ export default function Landing() {
         { icon: DollarSign, label: "Expenses" },
         { icon: Car, label: "Mileage" }
       ].map(({ icon: Icon, label }) => (
-        <div key={label} className="flex flex-col items-center text-gray-700">
-          <div className="bg-blue-100 p-4 rounded-xl mb-3 glow card-hover">
-            <Icon className="w-6 h-6 text-blue-500" />
+        <div key={label} className="flex flex-col items-center text-gray-300">
+          <div className="bg-blue-900/30 p-4 rounded-xl mb-3 glow card-hover">
+            <Icon className="w-6 h-6 text-blue-400" />
           </div>
           <span className="text-sm font-medium">{label}</span>
         </div>

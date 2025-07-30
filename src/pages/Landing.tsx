@@ -405,48 +405,58 @@ export default function Landing() {
     </div>
   </div>
 
-      {/* Why Choose Us Section */}
-      <div className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 blur-effect bg-[#1a1d25]/50" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose PAYZIO?
-            </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Built with self-employed professionals in mind, our platform combines simplicity with powerful features
-            </p>
-          </div>
+     {/* Why Choose Us Section */}
+  <div className="relative pt-32 pb-20 bg-[#0F1116] overflow-hidden text-white">
+  {/* Blobs */}
+  <div className="absolute inset-0 pointer-events-none -z-10">
+    <div className="absolute top-10 left-1/4 w-56 h-56 rounded-full bg-gradient-to-tr from-blue-500 via-cyan-400 to-blue-400 filter blur-3xl opacity-20 animate-float" />
+    <div className="absolute top-1/2 right-1/4 w-44 h-44 rounded-full bg-gradient-to-br from-cyan-500 via-blue-500 to-cyan-400 filter blur-2xl opacity-25 animate-float-slow" />
+    <div className="absolute bottom-16 left-1/3 w-52 h-52 rounded-full bg-gradient-to-tr from-blue-400 via-cyan-400 to-blue-500 filter blur-3xl opacity-15 animate-float-reverse" />
+  </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Zap,
-                title: "Built for Speed",
-                description: "Streamlined workflows and intuitive design help you manage finances in minutes, not hours."
-              },
-              {
-                icon: Users,
-                title: "Self-Employed First",
-                description: "Every feature is tailored for independent professionals, because we understand your unique needs."
-              },
-              {
-                icon: Sparkles,
-                title: "Grows With You",
-                description: "From solo freelancer to small business owner, our platform scales seamlessly as your business expands."
-              }
-            ].map(({ icon: Icon, title, description }) => (
-              <div key={title} className="blur-effect bg-[#1a1d25]/50 rounded-xl p-8 glow card-hover border border-[#2f68b4]/20">
-                <div className="bg-[#2f68b4]/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-                  <Icon className="w-8 h-8 text-[#2f68b4]" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4 text-center">{title}</h3>
-                <p className="text-gray-300 leading-relaxed text-center">{description}</p>
-              </div>
-            ))}
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        Why Choose PAYZIO?
+      </h2>
+      <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+        Built with self-employed professionals in mind, our platform combines simplicity with powerful features
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-3 gap-8">
+      {[
+        {
+          icon: Zap,
+          title: "Built for Speed",
+          description: "Streamlined workflows and intuitive design help you manage finances in minutes, not hours."
+        },
+        {
+          icon: Users,
+          title: "Self-Employed First",
+          description: "Every feature is tailored for independent professionals, because we understand your unique needs."
+        },
+        {
+          icon: Sparkles,
+          title: "Grows With You",
+          description: "From solo freelancer to small business owner, our platform scales seamlessly as your business expands."
+        }
+      ].map(({ icon: Icon, title, description }) => (
+        <div
+          key={title}
+          className="rounded-xl bg-[#1a1d25]/70 border border-blue-500/30 p-8 text-center shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-default glow card-hover"
+        >
+          <div className="mx-auto mb-6 w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center text-white">
+            <Icon className="w-8 h-8" />
           </div>
+          <h3 className="text-xl font-semibold text-white mb-4">{title}</h3>
+          <p className="text-gray-300 leading-relaxed">{description}</p>
         </div>
-      </div>
+      ))}
+    </div>
+  </div>
+</div>
+
 
       {/* FAQ Section */}
       <div className="relative py-24 overflow-hidden">

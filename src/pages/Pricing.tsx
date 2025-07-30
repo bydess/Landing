@@ -111,7 +111,7 @@ export default function Pricing() {
         {/* Free Trial CTA */}
         <section className="relative py-24">
           <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
-            <div className="w-[600px] h-[600px] gradient-blur opacity-20" />
+            <div className="w-[600px] h-[400px] gradient-blur opacity-20" />
           </div>
           <div className="max-w-3xl mx-auto px-4 relative text-center">
             <h2 className="text-3xl font-bold mb-6">Try Payzio for 7 Days</h2>

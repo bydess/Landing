@@ -164,14 +164,14 @@ export default function Landing() {
 </div>
 
 
-{/* Common Frustrations Section */}
+    {/* Common Frustrations Section */}
 <div className="relative py-24 overflow-hidden bg-[#0F1116]">
-  {/* Blobs */}
-  <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
-    <div className="absolute top-10 left-1/3 w-40 h-40 bg-blue-500 opacity-20 rounded-full blur-[120px]" />
-    <div className="absolute top-1/4 right-10 w-32 h-32 bg-blue-500 opacity-25 rounded-full blur-[100px]" />
-    <div className="absolute bottom-20 left-1/4 w-44 h-44 bg-blue-500 opacity-15 rounded-full blur-[110px]" />
-    <div className="absolute bottom-10 right-1/3 w-36 h-36 bg-cyan-500 opacity-10 rounded-full blur-[100px]" />
+  {/* Decorative Blobs */}
+  <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+    <div className="absolute top-10 left-[10%] w-[180px] h-[180px] bg-blue-500 rounded-full filter blur-3xl opacity-30" />
+    <div className="absolute top-[30%] right-[15%] w-[140px] h-[140px] bg-blue-500 rounded-full filter blur-2xl opacity-25" />
+    <div className="absolute bottom-[20%] left-[40%] w-[120px] h-[120px] bg-cyan-500 rounded-full filter blur-2xl opacity-20" />
+    <div className="absolute bottom-[10%] right-[5%] w-[160px] h-[160px] bg-blue-500 rounded-full filter blur-3xl opacity-30" />
   </div>
 
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -220,18 +220,15 @@ export default function Landing() {
           ]
         }
       ].map(({ icon: Icon, title, points }) => (
-        <div
-          key={title}
-          className="bg-[#1a1d25]/60 border border-[#2f68b4]/20 backdrop-blur-md rounded-xl p-8 shadow-lg transition-transform transform hover:-translate-y-1 hover:shadow-blue-500/20"
-        >
-          <div className="bg-blue-500/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6">
-            <Icon className="w-7 h-7 text-blue-500" />
+        <div key={title} className="bg-[#1a1d25]/50 rounded-xl p-8 backdrop-blur-md border border-blue-500/20 shadow-lg hover:shadow-blue-500/30 transition-shadow duration-300">
+          <div className="bg-blue-500/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+            <Icon className="w-8 h-8 text-blue-500" />
           </div>
           <h3 className="text-xl font-semibold text-white mb-4">{title}</h3>
           <ul className="space-y-3">
             {points.map((point, index) => (
               <li key={index} className="flex items-start space-x-2 text-gray-300">
-                <div className="w-1.5 h-1.5 mt-2 bg-blue-500 rounded-full" />
+                <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2" />
                 <span>{point}</span>
               </li>
             ))}

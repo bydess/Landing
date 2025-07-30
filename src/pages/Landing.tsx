@@ -108,6 +108,8 @@ export default function Landing() {
 </div>
 
    {/* Hero Section */}
+<div className="relative pt-32 pb-20 bg-[#0F1116] overflow-hidden text-white">
+  {/* Blobs */}
 
   {/* Content */}
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">

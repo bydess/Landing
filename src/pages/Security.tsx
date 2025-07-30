@@ -13,7 +13,7 @@ export default function Security() {
 
   return (
     <>
-      <SEO <SEO 
+      <SEO
         title="PAYZIO Security - Bank-Level Protection for Your Financial Data"
         description="Learn about PAYZIO's comprehensive security measures: end-to-end encryption, multi-factor authentication, and regular security audits to protect your business data."
         keywords="payzio security, financial data protection, encryption, multi-factor authentication, secure financial software, business data security, privacy protection"

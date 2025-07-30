@@ -36,133 +36,117 @@ export default function About() {
           }
         }}
       />
-    <div className="min-h-screen bg-[#0F1116] relative overflow-hidden pt-32">
-      {/* Background Gradient Blurs */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-[400px] h-[400px] gradient-blur opacity-30" />
-        <div className="absolute top-1/3 right-1/4 w-[300px] h-[300px] gradient-blur opacity-20" />
-        <div className="absolute bottom-1/4 left-1/3 w-[350px] h-[350px] gradient-blur opacity-25" />
-      </div>
 
-      {/* Mission Section */}
-      <section className="relative py-0">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                A Better Way to Manage Your Business Finances
-              </h1>
-              <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                We understand the frustration of dealing with overly complex financial tools. That's why we built Payzio - a simple, intuitive platform that makes tracking income, expenses, and mileage effortless for freelancers and small business owners.
+      <div className="relative pt-32 pb-20 bg-[#0F1116] overflow-hidden text-white min-h-screen">
+        {/* Blobs Background */}
+        <div className="absolute inset-0 pointer-events-none -z-10">
+          <div className="absolute top-1/4 left-1/4 w-60 h-60 rounded-full bg-gradient-to-tr from-blue-500 via-cyan-400 to-blue-400 filter blur-3xl opacity-25 animate-float" />
+          <div className="absolute top-1/2 right-1/4 w-72 h-72 rounded-full bg-gradient-to-br from-cyan-500 via-blue-500 to-cyan-400 filter blur-2xl opacity-20 animate-float-slow" />
+          <div className="absolute bottom-20 left-1/3 w-64 h-64 rounded-full bg-gradient-to-tr from-blue-400 via-cyan-400 to-blue-500 filter blur-3xl opacity-15 animate-float-reverse" />
+        </div>
+
+        {/* Mission Section */}
+        <section className="relative max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 mb-24 grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <h1 className="text-5xl font-extrabold tracking-tight mb-6 leading-tight">
+              A Better Way to Manage Your Business Finances
+            </h1>
+            <p className="text-lg text-gray-300 mb-8 max-w-xl leading-relaxed">
+              We understand the frustration of dealing with overly complex financial tools. That's why we built Payzio - a simple, intuitive platform that makes tracking income, expenses, and mileage effortless for freelancers and small business owners.
+            </p>
+            <ul className="space-y-4 max-w-md">
+              {[
+                "No more spreadsheet chaos",
+                "Track everything in one place",
+                "Built for real people, not accountants"
+              ].map(item => (
+                <li key={item} className="flex items-center space-x-3 text-gray-300 text-base">
+                  <span className="w-3 h-3 rounded-full bg-gradient-to-tr from-blue-500 to-cyan-500 inline-block" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-[#2f68b4]/20 bg-[#1a1d25]/60 backdrop-blur-md p-10">
+            <div className="text-center space-y-6">
+              <h2 className="text-4xl font-bold text-white tracking-wide">
+                One price, all features
+              </h2>
+              <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto rounded" />
+              <p className="text-2xl text-gradient-blue-cyan font-semibold">
+                Financial simplicity for all
               </p>
-              <div className="space-y-4">
-                {[
-                  "No more spreadsheet chaos",
-                  "Track everything in one place",
-                  "Built for real people, not accountants"
-                ].map((item) => (
-                  <div key={item} className="flex items-center space-x-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#2f68b4]" />
-                    <p className="text-gray-300">{item}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-[#2f68b4]/20 to-transparent rounded-2xl blur-[100px]" />
-              <div className="relative blur-effect bg-[#1a1d25]/50 rounded-2xl p-8 border border-[#2f68b4]/20 glow">
-                {/* Quote Box */}
-                <div className="relative rounded-lg bg-gradient-to-br from-[#1a1d25] to-[#2f68b4]/10 p-8 border border-[#2f68b4]/20">
-                  <div className="text-center space-y-6">
-                    <h2 className="text-3xl font-bold text-white">
-                      One price, all features
-                    </h2>
-                    <div className="w-16 h-0.5 bg-[#2f68b4]/30 mx-auto" />
-                    <p className="text-2xl text-[#2f68b4] font-medium">
-                      Financial simplicity for all
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Pricing Philosophy Section */}
-      <section className="relative py-20">
-        <div className="absolute inset-0 blur-effect bg-[#1a1d25]/30" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        {/* Pricing Philosophy Section */}
+        <section className="relative max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 mb-24">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-4xl font-extrabold mb-4 tracking-tight">
               Fair and Transparent Pricing You Can Trust
             </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+            <p className="text-gray-300 text-lg">
               We believe in simple, honest pricing that gives everyone access to the tools they need to succeed.
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="blur-effect bg-[#1a1d25]/50 rounded-xl p-8 border border-gray-800 relative">
-                <div className="absolute -top-3 -right-3">
-                  <span className="bg-gray-800 text-gray-400 px-4 py-1 rounded-full text-sm">
-                    Other Apps
-                  </span>
-                </div>
-                <ul className="space-y-4">
-                  {[
-                    "Complex tiered pricing",
-                    "Feature limitations",
-                    "Constant upselling",
-                    "Hidden fees"
-                  ].map((item) => (
-                    <li key={item} className="flex items-center text-gray-400">
-                      <Scale className="w-5 h-5 mr-3 text-gray-500" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            {/* Other Apps */}
+            <div className="bg-[#1a1d25]/60 rounded-2xl p-10 border border-gray-800 shadow-lg">
+              <div className="absolute -top-3 -right-3 bg-gray-800 text-gray-400 px-4 py-1 rounded-full text-sm select-none pointer-events-none">
+                Other Apps
               </div>
+              <ul className="space-y-5 mt-6">
+                {[
+                  "Complex tiered pricing",
+                  "Feature limitations",
+                  "Constant upselling",
+                  "Hidden fees"
+                ].map(item => (
+                  <li key={item} className="flex items-center text-gray-400 text-lg">
+                    <Scale className="w-6 h-6 mr-4 text-gray-500" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-              <div className="blur-effect bg-[#1a1d25]/50 rounded-xl p-8 border border-[#2f68b4]/20 glow relative">
-                <div className="absolute -top-3 -right-3">
-                  <span className="bg-[#2f68b4] text-white px-4 py-1 rounded-full text-sm">
-                    Payzio
-                  </span>
-                </div>
-                <ul className="space-y-4">
-                  {[
-                    "One simple price - $15/month",
-                    "All features included",
-                    "No feature restrictions",
-                    "No surprise fees"
-                  ].map((item) => (
-                    <li key={item} className="flex items-center text-white">
-                      <Sparkles className="w-5 h-5 mr-3 text-[#2f68b4]" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+            {/* Payzio */}
+            <div className="bg-[#1a1d25]/60 rounded-2xl p-10 border border-[#2f68b4]/30 shadow-[0_0_20px_rgba(47,104,180,0.5)] relative">
+              <div className="absolute -top-3 -right-3 bg-gradient-to-tr from-blue-500 to-cyan-500 text-white px-5 py-1 rounded-full text-sm select-none pointer-events-none">
+                Payzio
               </div>
+              <ul className="space-y-5 mt-6">
+                {[
+                  "One simple price - $15/month",
+                  "All features included",
+                  "No feature restrictions",
+                  "No surprise fees"
+                ].map(item => (
+                  <li key={item} className="flex items-center text-white text-lg">
+                    <Sparkles className="w-6 h-6 mr-4 text-gradient-blue-cyan" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Built for People Section */}
-      <section className="relative py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        {/* Built for People Section */}
+        <section className="relative max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 mb-24">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-4xl font-extrabold mb-4 tracking-tight">
               Designed with You in Mind
             </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+            <p className="text-gray-300 text-lg">
               Created after listening to the needs of real users who want efficiency without the complexity.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
             {[
               {
                 icon: Target,
@@ -180,46 +164,70 @@ export default function About() {
                 description: "Take control of your finances without the accounting degree."
               }
             ].map(({ icon: Icon, title, description }) => (
-              <div key={title} className="blur-effect bg-[#1a1d25]/50 rounded-xl p-8 glow card-hover border border-[#2f68b4]/20">
-                <div className="bg-[#2f68b4]/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-                  <Icon className="w-8 h-8 text-[#2f68b4]" />
+              <div key={title} className="bg-[#1a1d25]/60 rounded-2xl p-8 border border-[#2f68b4]/30 shadow-lg hover:shadow-[0_0_25px_rgba(47,104,180,0.7)] transition-shadow duration-300 flex flex-col items-center text-center">
+                <div className="bg-gradient-to-tr from-blue-500 to-cyan-500 p-4 rounded-full mb-6 inline-flex items-center justify-center">
+                  <Icon className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4 text-center">{title}</h3>
-                <p className="text-gray-300 text-center">{description}</p>
+                <h3 className="text-2xl font-semibold text-white mb-3">{title}</h3>
+                <p className="text-gray-300 max-w-sm">{description}</p>
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="relative py-20">
-        <div className="absolute inset-0 bg-[#1a1d25]/30 blur-effect" />
-        <div className="absolute inset-0">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] gradient-blur opacity-20" />
-        </div>
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Join the Payzio Community
-            </h2>
-            <p className="text-lg text-gray-300 mb-8">
-              Experience the simplicity of modern financial management designed for real people.
-            </p>
-            <button
-              onClick={() => (window.location.href = 'https://app.payzio.io/auth')}
-              className="group bg-[#2f68b4] text-white px-8 py-3 rounded-lg font-semibold text-lg shadow-lg hover:bg-[#3578c4] transition-all duration-300 glow inline-flex items-center"
-            >
-              Start Your Free Trial
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <p className="text-sm text-gray-400 mt-4">
-              No credit card required • 7-day free trial • Cancel anytime
-            </p>
-          </div>
-        </div>
-      </section>
-    </div>
+        {/* CTA Section */}
+        <section className="relative max-w-3xl mx-auto px-6 sm:px-12 lg:px-16 text-center">
+          {/* Blobs behind */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gradient-to-tr from-blue-500 via-cyan-400 to-blue-400 filter blur-3xl opacity-20 animate-float pointer-events-none -z-10" />
+          
+          <h2 className="text-4xl font-extrabold mb-6">
+            Join the Payzio Community
+          </h2>
+          <p className="text-gray-300 text-lg mb-10 max-w-lg mx-auto">
+            Experience the simplicity of modern financial management designed for real people.
+          </p>
+          <button
+            onClick={() => window.location.href = 'https://app.payzio.io/auth'}
+            className="inline-flex items-center px-10 py-3 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold shadow-lg hover:brightness-110 transition duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400 focus:ring-offset-2"
+          >
+            Start Your Free Trial
+            <ArrowRight className="w-5 h-5 ml-3" />
+          </button>
+          <p className="text-sm text-gray-400 mt-5 select-none">
+            No credit card required • 7-day free trial • Cancel anytime
+          </p>
+        </section>
+
+        {/* Floating animations CSS */}
+        <style jsx>{`
+          @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+          }
+          @keyframes float-slow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+          }
+          @keyframes float-reverse {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+          }
+          .animate-float {
+            animation: float 6s ease-in-out infinite;
+          }
+          .animate-float-slow {
+            animation: float-slow 10s ease-in-out infinite;
+          }
+          .animate-float-reverse {
+            animation: float-reverse 8s ease-in-out infinite;
+          }
+          .text-gradient-blue-cyan {
+            background: linear-gradient(90deg, #3b82f6, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        `}</style>
+      </div>
     </>
   );
 }

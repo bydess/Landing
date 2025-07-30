@@ -99,11 +99,7 @@ export default function Landing() {
       />
     <div className="min-h-screen bg-[#0F1116]  relative overflow-hidden">
      {/* Background Blobs */}
-  {/* Blobs globally fixed (place once at top of page) */}
-  <div className="fixed inset-0 pointer-events-none -z-10">
-    <div className="absolute top-10 left-1/3 w-56 h-56 bg-blue-500 rounded-full filter blur-3xl opacity-20 animate-float" />
-    <div className="absolute top-1/2 right-1/4 w-40 h-40 bg-cyan-500 rounded-full filter blur-2xl opacity-20 animate-float-slow" />
-    <div className="absolute bottom-10 left-1/4 w-52 h-52 bg-blue-500 rounded-full filter blur-3xl opacity-15 animate-float-reverse" />
+<div className="fixed inset-0 overflow-hidden pointer-events-none -z-10">
   <div className="absolute top-10 left-10 w-40 h-40 bg-blue-500 rounded-full filter blur-3xl opacity-30 animate-pulse" />
   <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-blue-500 rounded-full filter blur-2xl opacity-25 animate-pulse delay-200" />
   <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-cyan-500 rounded-full filter blur-2xl opacity-20 animate-pulse delay-300" />
@@ -328,6 +324,12 @@ export default function Landing() {
 </div>
 
   {/* Job Roles Section */}
+      <div className="relative pt-32 pb-20 bg-[#0F1116] overflow-hidden text-white">
+  {/* Small Blue Gradient Blobs */}
+    <div className="absolute top-10 left-10 w-32 h-32 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 opacity-20 blur-3xl" />
+    <div className="absolute top-1/2 right-12 w-24 h-24 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 opacity-30 blur-2xl" />
+    <div className="absolute bottom-16 left-1/3 w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 opacity-25 blur-2xl" />
+    <div className="absolute bottom-20 right-1/4 w-28 h-28 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 opacity-15 blur-3xl" />
   <div className="relative py-24 overflow-hidden bg-[#0F1116]">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div className="text-center mb-16">

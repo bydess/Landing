@@ -101,7 +101,7 @@ export default function Features() {
         </section>
 
         {/* Section 3: Built for You */}
-        <section className="relative pb-8 py-24">
+        <section className="relative py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Designed with Your Needs in Mind</h2>

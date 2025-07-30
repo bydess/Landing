@@ -98,12 +98,15 @@ export default function Landing() {
         }}
       />
     <div className="min-h-screen bg-[#0F1116]  relative overflow-hidden">
-      {/* Background Gradient Blurs */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-[400px] h-[400px] gradient-blur opacity-30" />
-        <div className="absolute top-1/3 right-1/4 w-[300px] h-[300px] gradient-blur opacity-20" />
-        <div className="absolute bottom-1/4 left-1/3 w-[350px] h-[350px] gradient-blur opacity-25" />
-      </div>
+     {/* Background Blobs */}
+<div className="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+  <div className="absolute top-10 left-10 w-40 h-40 bg-blue-500 rounded-full filter blur-3xl opacity-30 animate-pulse" />
+  <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-blue-500 rounded-full filter blur-2xl opacity-25 animate-pulse delay-200" />
+  <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-cyan-500 rounded-full filter blur-2xl opacity-20 animate-pulse delay-300" />
+  <div className="absolute bottom-20 left-1/4 w-28 h-28 bg-blue-500 rounded-full filter blur-2xl opacity-20 animate-pulse delay-500" />
+  <div className="absolute bottom-10 right-10 w-36 h-36 bg-blue-500 rounded-full filter blur-3xl opacity-25 animate-pulse delay-700" />
+</div>
+
 
       {/* Hero Section */}
       <div className="relative pt-32 pb-20">

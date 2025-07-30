@@ -157,6 +157,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             </p>
           </div>
         </div>
+  </div>
       </footer>
 
       {/* Tailwind custom gradient utility */}
@@ -167,7 +168,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
           -webkit-text-fill-color: transparent;
         }
       `}</style>
-    </div>
     </div>
   );
 }

@@ -340,6 +340,7 @@ export default function Cookies() {
           </div>
         </div>
       </section>
+      </section>
 
 
 

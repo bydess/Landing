@@ -112,7 +112,7 @@ export default function Landing() {
   {/* Blobs */}
   <div className="absolute inset-0 pointer-events-none z-0">
     <div className="absolute top-10 left-1/3 w-50 h-50 bg-blue-500 rounded-full filter blur-2xl opacity-30 animate-float" />
-    <div className="absolute top-[30%] right-1/4 w-18 h-18 bg-cyan-500 rounded-full filter blur-xl opacity-20 animate-float-slow" />
+    <div className="absolute top-[30%] right-1/4 w-28 h-28 bg-cyan-500 rounded-full filter blur-xl opacity-20 animate-float-slow" />
     <div className="absolute bottom-10 left-1/4 w-36 h-36 bg-blue-500 rounded-full filter blur-2xl opacity-25 animate-float-reverse" />
     <div className="absolute bottom-[20%] right-[20%] w-24 h-24 bg-blue-500 rounded-full filter blur-2xl opacity-20 animate-float" />
   </div>

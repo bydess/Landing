@@ -107,50 +107,54 @@ export default function Landing() {
   <div className="absolute bottom-10 right-10 w-36 h-36 bg-blue-500 rounded-full filter blur-3xl opacity-25 animate-pulse delay-700" />
 </div>
 
-      {/* Hero Section */}
-      <div className="relative pt-32 pb-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
-            Streamline Your Business
-            <span className="block text-[#2f68b4] mt-2">Finances Made Simple</span>
-          </h1>
+     {/* Hero Section */}
+<div className="relative pt-32 pb-20 bg-white overflow-hidden">
 
-          <p className="max-w-2xl mx-auto text-xl text-gray-300 mb-12">
-            All-in-one platform for managing estimates, invoices, expenses, and mileage tracking. 
-            Perfect for independent contractors and freelancers.
-          </p>
+  {/* Content */}
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+    <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 mb-6 tracking-tight">
+      Manage Your Business with Ease
+      <span className="block bg-gradient-to-r from-blue-500 to-cyan-500 text-transparent bg-clip-text mt-2">
+        Finances Made Simple
+      </span>
+    </h1>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto mb-12">
-            {[
-              { icon: FileText, label: "Estimates" },
-              { icon: Receipt, label: "Invoices" },
-              { icon: DollarSign, label: "Expenses" },
-              { icon: Car, label: "Mileage" }
-            ].map(({ icon: Icon, label }) => (
-              <div key={label} className="flex flex-col items-center text-gray-300">
-                <div className="bg-[#2f68b4]/10 p-4 rounded-xl mb-3 glow card-hover">
-                  <Icon className="w-6 h-6 text-[#2f68b4]" />
-                </div>
-                <span className="text-sm">{label}</span>
-              </div>
-            ))}
+    <p className="max-w-2xl mx-auto text-xl text-gray-600 mb-12">
+      Everything you need to run your business — from quotes and invoices to tracking expenses and mileage — in one place.
+    </p>
+
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto mb-12">
+      {[
+        { icon: FileText, label: "Estimates" },
+        { icon: Receipt, label: "Invoices" },
+        { icon: DollarSign, label: "Expenses" },
+        { icon: Car, label: "Mileage" }
+      ].map(({ icon: Icon, label }) => (
+        <div key={label} className="flex flex-col items-center text-gray-700">
+          <div className="bg-blue-100 p-4 rounded-xl mb-3 glow card-hover">
+            <Icon className="w-6 h-6 text-blue-500" />
           </div>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button
-               onClick={() => (window.location.href = 'https://app.payzio.io/auth')}
-              className="group bg-[#2f68b4] text-white px-8 py-3 rounded-lg font-semibold text-lg shadow-lg hover:bg-[#3578c4] transition-all duration-300 glow flex items-center"
-            >
-             Simplify Your Business Now
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <p className="text-gray-400 text-sm">
-            No hidden fees • 7 days for free • Cancel anytime
-
-            </p>
-          </div>
+          <span className="text-sm font-medium">{label}</span>
         </div>
-      </div>
+      ))}
+    </div>
+
+    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <button
+        onClick={() => (window.location.href = 'https://app.payzio.io/auth')}
+        className="group bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-full font-semibold text-lg shadow-lg hover:opacity-90 transition-all duration-300 flex items-center"
+      >
+        Simplify Your Business Now
+        <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+      </button>
+
+      <p className="text-gray-500 text-sm mt-2 sm:mt-0">
+        No hidden fees • 7-day free trial • Cancel anytime
+      </p>
+    </div>
+  </div>
+</div>
+
 
       {/* Common Frustrations Section */}
       <div className="relative py-24 overflow-hidden">

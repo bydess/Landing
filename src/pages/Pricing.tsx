@@ -109,7 +109,7 @@ export default function Pricing() {
         </section>
 
         {/* Free Trial CTA */}
-        <section className="relative py-4">
+        <section className="relative py-24">
           <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
             <div className="w-[600px] h-[600px] gradient-blur opacity-20" />
           </div>

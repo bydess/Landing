@@ -107,8 +107,16 @@ export default function Landing() {
   <div className="absolute bottom-10 right-10 w-36 h-36 bg-blue-500 rounded-full filter blur-3xl opacity-25 animate-pulse delay-700" />
 </div>
 
-     {/* Hero Section */}
+    {/* Hero Section */}
 <div className="relative pt-32 pb-20 bg-white overflow-hidden">
+  {/* Animated Blobs */}
+  <div className="absolute inset-0 pointer-events-none z-0">
+    <div className="absolute top-10 left-[20%] w-36 h-36 bg-blue-500 rounded-full blur-3xl opacity-25 animate-float" />
+    <div className="absolute top-1/4 right-[10%] w-24 h-24 bg-blue-500 rounded-full blur-2xl opacity-20 animate-float-reverse" />
+    <div className="absolute top-1/2 left-[15%] w-28 h-28 bg-cyan-500 rounded-full blur-2xl opacity-15 animate-float-slow" />
+    <div className="absolute bottom-20 right-[20%] w-32 h-32 bg-blue-500 rounded-full blur-3xl opacity-20 animate-float" />
+    <div className="absolute bottom-5 left-[30%] w-20 h-20 bg-cyan-500 rounded-full blur-xl opacity-15 animate-float-slow" />
+  </div>
 
   {/* Content */}
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -154,6 +162,7 @@ export default function Landing() {
     </div>
   </div>
 </div>
+
 
 
       {/* Common Frustrations Section */}

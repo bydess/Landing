@@ -23,10 +23,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <main className="flex-grow">{children}</main>
 
       {/* Footer */}
-      <footer className="relative bg-[#0a0c10] pt-20 pb-12 overflow-hidden">
-        {/* Top blobs for subtle background flow */}
-        <div className="absolute -top-32 left-1/2 transform -translate-x-1/2 w-[700px] h-[700px] rounded-full bg-gradient-to-tr from-blue-600 via-cyan-500 to-blue-400 opacity-20 filter blur-3xl pointer-events-none" />
-        <div className="absolute -top-40 right-1/4 w-[500px] h-[500px] rounded-full bg-gradient-to-tr from-cyan-400 via-blue-500 to-cyan-300 opacity-15 filter blur-2xl pointer-events-none" />
+<div className="relative pt-32 pb-20 bg-[#0F1116] overflow-hidden text-white">
+  {/* Blobs */}
+  <div className="absolute inset-0 pointer-events-none -z-10">
+    <div className="absolute top-1/3 left-1/4 w-48 h-48 rounded-full bg-gradient-to-tr from-blue-500 via-cyan-400 to-blue-400 filter blur-3xl opacity-20 animate-float" />
+    <div className="absolute top-1/2 right-1/4 w-56 h-56 rounded-full bg-gradient-to-br from-cyan-500 via-blue-500 to-cyan-400 filter blur-2xl opacity-25 animate-float-slow" />
+    <div className="absolute bottom-20 left-1/3 w-52 h-52 rounded-full bg-gradient-to-tr from-blue-400 via-cyan-400 to-blue-500 filter blur-3xl opacity-15 animate-float-reverse" />
 
         <div className="relative max-w-7xl mx-auto px-6 sm:px-12 lg:px-16">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-12">

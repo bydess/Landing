@@ -28,7 +28,7 @@ export default function Pricing() {
       <div className="relative pt-32 pb-20 bg-[#0F1116] overflow-hidden text-white min-h-screen">
 
         {/* Blobs */}
-        <div className="absolute inset-0 -z-10 pointer-events-none">
+        <div className="fixed inset-0 -z-10 pointer-events-none">
           <div className="absolute top-1/3 left-1/4 w-64 h-64 rounded-full bg-gradient-to-tr from-blue-500 via-cyan-400 to-blue-400 filter blur-3xl opacity-20 animate-float" />
           <div className="absolute top-1/2 right-1/4 w-72 h-72 rounded-full bg-gradient-to-br from-cyan-500 via-blue-500 to-cyan-400 filter blur-2xl opacity-25 animate-float-slow" />
           <div className="absolute bottom-20 left-1/3 w-52 h-52 rounded-full bg-gradient-to-tr from-blue-400 via-cyan-400 to-blue-500 filter blur-3xl opacity-15 animate-float-reverse" />

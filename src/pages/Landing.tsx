@@ -2,14 +2,12 @@ import React, { useState } from 'react';
 import { SEO } from '../components/SEO';
 import { 
   ArrowRight, DollarSign, FileText, Receipt, Car, 
-  BarChart, Clock, Calculator, Shield, Zap, Users, 
-  Sparkles, Heart, Lock, Laptop, Menu, X, Frown,
-  Smile, ArrowUpRight, ChevronDown, MessageCircle
+  Clock, Calculator, Zap, Users, Sparkles, MessageCircle,
+  Frown, Smile, ArrowUpRight, ChevronDown 
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 export default function Landing() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const navigate = useNavigate();
 
@@ -97,399 +95,382 @@ export default function Landing() {
           }
         }}
       />
-    <div className="min-h-screen bg-[#0F1116] relative overflow-hidden">
-      {/* Background Gradient Blurs */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-[400px] h-[400px] gradient-blur opacity-30" />
-        <div className="absolute top-1/3 right-1/4 w-[300px] h-[300px] gradient-blur opacity-20" />
-        <div className="absolute bottom-1/4 left-1/3 w-[350px] h-[350px] gradient-blur opacity-25" />
-      </div>
 
-      {/* Hero Section */}
-      <div className="relative pt-32 pb-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
-            Streamline Your Business
-            <span className="block text-[#2f68b4] mt-2">Finances Made Simple</span>
-          </h1>
-
-          <p className="max-w-2xl mx-auto text-xl text-gray-300 mb-12">
-            All-in-one platform for managing estimates, invoices, expenses, and mileage tracking. 
-            Perfect for independent contractors and freelancers.
-          </p>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto mb-12">
-            {[
-              { icon: FileText, label: "Estimates" },
-              { icon: Receipt, label: "Invoices" },
-              { icon: DollarSign, label: "Expenses" },
-              { icon: Car, label: "Mileage" }
-            ].map(({ icon: Icon, label }) => (
-              <div key={label} className="flex flex-col items-center text-gray-300">
-                <div className="bg-[#2f68b4]/10 p-4 rounded-xl mb-3 glow card-hover">
-                  <Icon className="w-6 h-6 text-[#2f68b4]" />
-                </div>
-                <span className="text-sm">{label}</span>
-              </div>
-            ))}
-          </div>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button
-               onClick={() => (window.location.href = 'https://app.payzio.io/auth')}
-              className="group bg-[#2f68b4] text-white px-8 py-3 rounded-lg font-semibold text-lg shadow-lg hover:bg-[#3578c4] transition-all duration-300 glow flex items-center"
-            >
-             Simplify Your Business Now
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <p className="text-gray-400 text-sm">
-            No hidden fees • 7 days for free • Cancel anytime
-
+      <div className="min-h-screen bg-white relative overflow-hidden text-gray-900">
+        {/* Hero Section */}
+        <section className="relative pt-24 pb-16">
+          <div className="max-w-7xl mx-auto px-6 text-center">
+            <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight mb-6 text-gray-900">
+              Streamline Your Business <br />
+              <span className="text-blue-600">Finances Made Simple</span>
+            </h1>
+            <p className="max-w-3xl mx-auto text-lg text-gray-600 mb-12">
+              All-in-one platform for managing estimates, invoices, expenses, and mileage tracking. Perfect for independent contractors and freelancers.
             </p>
-          </div>
-        </div>
-      </div>
 
-      {/* Common Frustrations Section */}
-      <div className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 blur-effect bg-[#1a1d25]/50" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Tired of Financial Software That Holds You Back?
-            </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              We understand your frustrations. That's why we built Payzio differently.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {[
-              {
-                icon: Frown,
-                title: "The Old Way",
-                points: [
-                  "Overwhelming features you never use",
-                  "Hidden costs and expensive tiers",
-                  "Confusing, cluttered interfaces",
-                  "Complex data sharing with accountants",
-                  "Time wasted on unnecessary complexity"
-                ]
-              },
-              {
-                icon: ArrowUpRight,
-                title: "Make the Switch",
-                points: [
-                  "Focus on essential tools that matter",
-                  "One simple, transparent price",
-                  "Clean, intuitive design",
-                  "Easy data exports for tax time",
-                  "Save hours every month"
-                ]
-              },
-              {
-                icon: Smile,
-                title: "The Payzio Way",
-                points: [
-                  "Just the features you need",
-                  "Everything included for $15/month",
-                  "Simple, beautiful interface",
-                  "Accountant-friendly exports",
-                  "Get more done in less time"
-                ]
-              }
-            ].map(({ icon: Icon, title, points }) => (
-              <div key={title} className="blur-effect bg-[#1a1d25]/50 rounded-xl p-8 glow card-hover border border-[#2f68b4]/20">
-                <div className="bg-[#2f68b4]/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                  <Icon className="w-8 h-8 text-[#2f68b4]" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{title}</h3>
-                <ul className="space-y-3">
-                  {points.map((point, index) => (
-                    <li key={index} className="flex items-start space-x-2 text-gray-300">
-                      <div className="w-1.5 h-1.5 rounded-full bg-[#2f68b4] mt-2" />
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <button
-              onClick={() => (window.location.href = 'https://app.payzio.io/auth')}
-              className="group bg-[#2f68b4] text-white px-8 py-3 rounded-lg font-semibold text-lg shadow-lg hover:bg-[#3578c4] transition-all duration-300 glow inline-flex items-center"
-            >
-              Try a Better Way
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <p className="text-sm text-gray-400 mt-4">
-              Join thousands of satisfied users who made the switch
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Features Section */}
-      <div className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 blur-effect bg-[#1a1d25]/50" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Everything You Need to Succeed
-            </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Powerful features designed to help you manage your business finances with ease
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Receipt,
-                title: "Smart Invoice Creation",
-                description: "Create professional invoices in seconds and track payments."
-              },
-              {
-                icon: Calculator,
-                title: "Expense Management",
-                description: "Log and categorize expenses for easy budgeting and tax preparation."
-              },
-              {
-                icon: FileText,
-                title: "Accountant-Ready Exports",
-                description: "Export financial data in CSV for your accountant easily."
-              },
-              {
-                icon: DollarSign,
-                title: "Self-Payment Tracking",
-                description: "Record and monitor your business income withdrawals accurately."
-              },
-              {
-                icon: Car,
-                title: "Vehicle & Mileage Tracking",
-                description: "Track business mileage and calculate vehicle depreciation for tax deductions."
-              },
-              {
-                icon: Clock,
-                title: "Time Savings",
-                description: "Save time with entries and focus on what matters most, growing your business."
-              }
-            ].map(({ icon: Icon, title, description }) => (
-              <div key={title} className="blur-effect bg-[#1a1d25]/50 rounded-xl p-8 glow card-hover border border-[#2f68b4]/20">
-                <div className="bg-[#2f68b4]/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                  <Icon className="w-8 h-8 text-[#2f68b4]" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{title}</h3>
-                <p className="text-gray-300 leading-relaxed">{description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Job Roles Section */}
-      <div className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-[#0F1116]" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Built for Every Professional
-            </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Tailored solutions for every type of self-employed professional
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {[
-              {
-                image: "https://i.postimg.cc/gcRjhyV2/okay3.png",
-                role: "Freelancer",
-                description: "Streamline invoicing and expense tracking to focus on what you do best."
-              },
-              {
-                image: "https://i.postimg.cc/xCNCtMBg/okay2.png",
-                role: "Consultant",
-                description: "Generate a clear financial report and simplify tax preparation."
-              },
-              {
-                image: "https://i.postimg.cc/qq87d0J3/okay5.png",
-                role: "Small Business Owner",
-                description: "Manage expenses and monitor business growth efficiently."
-              }
-            ].map(({ image, role, description }) => (
-              <div key={role} className="group relative">
-                <div className="relative h-64 overflow-hidden rounded-xl blur-effect bg-[#1a1d25]/50 border border-[#2f68b4]/20 glow card-hover">
-                  <img src={image} alt={role} className="w-full h-full object-cover opacity-50 group-hover:opacity-60 transition-opacity duration-300" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0F1116] via-[#0F1116]/70 to-transparent" />
-                  <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                    <h3 className="text-xl font-semibold text-white mb-2">{role}</h3>
-                    <p className="text-gray-300">{description}</p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto mb-12">
+              {[
+                { icon: FileText, label: "Estimates" },
+                { icon: Receipt, label: "Invoices" },
+                { icon: DollarSign, label: "Expenses" },
+                { icon: Car, label: "Mileage" }
+              ].map(({ icon: Icon, label }) => (
+                <div key={label} className="flex flex-col items-center text-gray-700 hover:text-blue-600 transition-colors cursor-pointer select-none">
+                  <div className="bg-blue-50 p-4 rounded-xl shadow hover:shadow-lg mb-3 transition-shadow">
+                    <Icon className="w-7 h-7" />
                   </div>
+                  <span className="text-sm font-medium">{label}</span>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {[
-              {
-                image: "https://i.postimg.cc/PfMsW531/okay.png",
-                role: "Contractor",
-                description: "Track multiple income streams and maximize tax deductions."
-              },
-              {
-                image: "https://i.postimg.cc/Gt0pN9CR/okay4.png",
-                role: "Remote Worker",
-                description: "Monitor expenses and cash flow for your personal projects."
-              }
-            ].map(({ image, role, description }) => (
-              <div key={role} className="group relative">
-                <div className="relative h-64 overflow-hidden rounded-xl blur-effect bg-[#1a1d25]/50 border border-[#2f68b4]/20 glow card-hover">
-                  <img src={image} alt={role} className="w-full h-full object-cover opacity-50 group-hover:opacity-60 transition-opacity duration-300" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0F1116] via-[#0F1116]/70 to-transparent" />
-                  <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                    <h3 className="text-xl font-semibold text-white mb-2">{role}</h3>
-                    <p className="text-gray-300">{description}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Why Choose Us Section */}
-      <div className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 blur-effect bg-[#1a1d25]/50" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose PAYZIO?
-            </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Built with self-employed professionals in mind, our platform combines simplicity with powerful features
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Zap,
-                title: "Built for Speed",
-                description: "Streamlined workflows and intuitive design help you manage finances in minutes, not hours."
-              },
-              {
-                icon: Users,
-                title: "Self-Employed First",
-                description: "Every feature is tailored for independent professionals, because we understand your unique needs."
-              },
-              {
-                icon: Sparkles,
-                title: "Grows With You",
-                description: "From solo freelancer to small business owner, our platform scales seamlessly as your business expands."
-              }
-            ].map(({ icon: Icon, title, description }) => (
-              <div key={title} className="blur-effect bg-[#1a1d25]/50 rounded-xl p-8 glow card-hover border border-[#2f68b4]/20">
-                <div className="bg-[#2f68b4]/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-                  <Icon className="w-8 h-8 text-[#2f68b4]" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4 text-center">{title}</h3>
-                <p className="text-gray-300 leading-relaxed text-center">{description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* FAQ Section */}
-      <div className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 blur-effect bg-[#1a1d25]/50" />
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-lg text-gray-300">
-              Find answers to common questions about Payzio
-            </p>
-          </div>
-
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="blur-effect bg-[#1a1d25]/50 rounded-xl border border-[#2f68b4]/20 overflow-hidden transition-all duration-300"
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+              <button
+                onClick={() => (window.location.href = 'https://app.payzio.io/auth')}
+                className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-10 py-3 rounded-lg font-semibold text-lg shadow-md transition duration-300"
               >
-                <button
-                  onClick={() => toggleFaq(index)}
-                  className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-[#2f68b4]/10 transition-colors"
-                >
-                  <span className="text-white font-medium">{faq.question}</span>
-                  <ChevronDown
-                    className={`w-5 h-5 text-[#2f68b4] transition-transform duration-300 ${
-                      openFaq === index ? 'rotate-180' : ''
-                    }`}
-                  />
-                </button>
-                <div
-                  className={`px-6 transition-all duration-300 ${
-                    openFaq === index ? 'py-4' : 'h-0 overflow-hidden'
-                  }`}
-                >
-                  <p className="text-gray-300">{faq.answer}</p>
-                </div>
-              </div>
-            ))}
+                Simplify Your Business Now
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+              <p className="text-gray-500 text-sm mt-2 sm:mt-0">
+                No hidden fees • 7 days for free • Cancel anytime
+              </p>
+            </div>
           </div>
+        </section>
 
-          <div className="mt-12 text-center">
-            <div className="inline-flex flex-col items-center">
-              <p className="text-gray-300 mb-4">Still have questions?</p>
+        {/* Common Frustrations Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Tired of Financial Software That Holds You Back?
+              </h2>
+              <p className="text-lg text-gray-700">
+                We understand your frustrations. That's why we built Payzio differently.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: Frown,
+                  title: "The Old Way",
+                  points: [
+                    "Overwhelming features you never use",
+                    "Hidden costs and expensive tiers",
+                    "Confusing, cluttered interfaces",
+                    "Complex data sharing with accountants",
+                    "Time wasted on unnecessary complexity"
+                  ]
+                },
+                {
+                  icon: ArrowUpRight,
+                  title: "Make the Switch",
+                  points: [
+                    "Focus on essential tools that matter",
+                    "One simple, transparent price",
+                    "Clean, intuitive design",
+                    "Easy data exports for tax time",
+                    "Save hours every month"
+                  ]
+                },
+                {
+                  icon: Smile,
+                  title: "The Payzio Way",
+                  points: [
+                    "Just the features you need",
+                    "Everything included for $15/month",
+                    "Simple, beautiful interface",
+                    "Accountant-friendly exports",
+                    "Get more done in less time"
+                  ]
+                }
+              ].map(({ icon: Icon, title, points }) => (
+                <div
+                  key={title}
+                  className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow cursor-default"
+                >
+                  <div className="bg-blue-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+                    <Icon className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-4">{title}</h3>
+                  <ul className="space-y-3 text-gray-700">
+                    {points.map((point, index) => (
+                      <li key={index} className="flex items-start space-x-2">
+                        <div className="w-2 h-2 rounded-full bg-blue-600 mt-2" />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center mt-16">
+              <button
+                onClick={() => (window.location.href = 'https://app.payzio.io/auth')}
+                className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-10 py-3 rounded-lg font-semibold text-lg shadow-md transition duration-300"
+              >
+                Try a Better Way
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+              <p className="text-gray-600 mt-4">
+                Join thousands of satisfied users who made the switch
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Everything You Need to Succeed</h2>
+              <p className="text-lg text-gray-700">
+                Powerful features designed to help you manage your business finances with ease
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: Receipt,
+                  title: "Smart Invoice Creation",
+                  description: "Create professional invoices in seconds and track payments."
+                },
+                {
+                  icon: Calculator,
+                  title: "Expense Management",
+                  description: "Log and categorize expenses for easy budgeting and tax preparation."
+                },
+                {
+                  icon: FileText,
+                  title: "Accountant-Ready Exports",
+                  description: "Export financial data in CSV for your accountant easily."
+                },
+                {
+                  icon: DollarSign,
+                  title: "Self-Payment Tracking",
+                  description: "Record and monitor your business income withdrawals accurately."
+                },
+                {
+                  icon: Car,
+                  title: "Vehicle & Mileage Tracking",
+                  description: "Track business mileage and calculate vehicle depreciation for tax deductions."
+                },
+                {
+                  icon: Clock,
+                  title: "Time Savings",
+                  description: "Save time with entries and focus on what matters most, growing your business."
+                }
+              ].map(({ icon: Icon, title, description }) => (
+                <div
+                  key={title}
+                  className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow cursor-default"
+                >
+                  <div className="bg-blue-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+                    <Icon className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-4">{title}</h3>
+                  <p className="text-gray-700 leading-relaxed">{description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Job Roles Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4
+              Built for Every Professional
+              </h2>
+              <p className="text-lg text-gray-700">
+                Tailored solutions for every type of self-employed professional
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              {[
+                {
+                  image: "https://i.postimg.cc/gcRjhyV2/okay3.png",
+                  role: "Freelancer",
+                  description: "Streamline invoicing and expense tracking to focus on what you do best."
+                },
+                {
+                  image: "https://i.postimg.cc/xCNCtMBg/okay2.png",
+                  role: "Consultant",
+                  description: "Generate a clear financial report and simplify tax preparation."
+                },
+                {
+                  image: "https://i.postimg.cc/qq87d0J3/okay5.png",
+                  role: "Small Business Owner",
+                  description: "Manage expenses and monitor business growth efficiently."
+                }
+              ].map(({ image, role, description }) => (
+                <div key={role} className="group relative rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow cursor-pointer bg-white">
+                  <img
+                    src={image}
+                    alt={role}
+                    className="w-full h-64 object-cover rounded-t-xl group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{role}</h3>
+                    <p className="text-gray-700">{description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {[
+                {
+                  image: "https://i.postimg.cc/PfMsW531/okay.png",
+                  role: "Contractor",
+                  description: "Track multiple income streams and maximize tax deductions."
+                },
+                {
+                  image: "https://i.postimg.cc/Gt0pN9CR/okay4.png",
+                  role: "Remote Worker",
+                  description: "Monitor expenses and cash flow for your personal projects."
+                }
+              ].map(({ image, role, description }) => (
+                <div key={role} className="group relative rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow cursor-pointer bg-white">
+                  <img
+                    src={image}
+                    alt={role}
+                    className="w-full h-64 object-cover rounded-t-xl group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{role}</h3>
+                    <p className="text-gray-700">{description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Us Section */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose PAYZIO?</h2>
+              <p className="text-lg text-gray-700">
+                Built with self-employed professionals in mind, our platform combines simplicity with powerful features
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: Zap,
+                  title: "Built for Speed",
+                  description: "Streamlined workflows and intuitive design help you manage finances in minutes, not hours."
+                },
+                {
+                  icon: Users,
+                  title: "Self-Employed First",
+                  description: "Every feature is tailored for independent professionals, because we understand your unique needs."
+                },
+                {
+                  icon: Sparkles,
+                  title: "Grows With You",
+                  description: "From solo freelancer to small business owner, our platform scales seamlessly as your business expands."
+                }
+              ].map(({ icon: Icon, title, description }) => (
+                <div
+                  key={title}
+                  className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow cursor-default text-center"
+                >
+                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Icon className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-4">{title}</h3>
+                  <p className="text-gray-700 leading-relaxed">{description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-6">
+            <div className="text-center max-w-2xl mx-auto mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+              <p className="text-lg text-gray-700">Find answers to common questions about Payzio</p>
+            </div>
+
+            <div className="space-y-4">
+              {faqs.map((faq, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden transition-shadow hover:shadow-lg"
+                >
+                  <button
+                    onClick={() => toggleFaq(index)}
+                    className="w-full px-6 py-4 flex items-center justify-between text-left text-gray-900 font-medium hover:bg-blue-50 transition-colors"
+                    aria-expanded={openFaq === index}
+                    aria-controls={`faq-panel-${index}`}
+                    id={`faq-header-${index}`}
+                  >
+                    <span>{faq.question}</span>
+                    <ChevronDown
+                      className={`w-5 h-5 text-blue-600 transition-transform duration-300 ${openFaq === index ? 'rotate-180' : ''}`}
+                    />
+                  </button>
+                  <div
+                    id={`faq-panel-${index}`}
+                    role="region"
+                    aria-labelledby={`faq-header-${index}`}
+                    className={`px-6 overflow-hidden transition-all duration-300 ${
+                      openFaq === index ? 'py-4 max-h-96' : 'max-h-0'
+                    }`}
+                  >
+                    <p className="text-gray-700">{faq.answer}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-12 text-center">
               <button
                 onClick={() => handleExternalLink('mailto:support@payzio.io')}
-                className="group bg-[#1a1d25] text-white px-8 py-3 rounded-lg font-semibold border border-[#2f68b4]/20 hover:bg-[#2f68b4]/10 transition-all duration-300 inline-flex items-center"
+                className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold shadow-md transition duration-300"
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Contact Support
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 ml-2" />
               </button>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
 
-      {/* Final CTA Section */}
-      <div className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-[#1a1d25]/30 blur-effect" />
-        <div className="absolute inset-0">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] gradient-blur opacity-20" />
-        </div>
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        {/* Final CTA Section */}
+        <section className="py-20">
+          <div className="max-w-3xl mx-auto px-6 text-center">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
               Ready to Transform Your Financial Management?
             </h2>
-            <p className="text-lg text-gray-300 mb-8">
+            <p className="text-lg text-gray-700 mb-8">
               Join other self-employed professionals who have simplified their business finances with PAYZIO.
             </p>
             <button
               onClick={() => (window.location.href = 'https://app.payzio.io/auth')}
-              className="group bg-[#2f68b4] text-white px-8 py-3 rounded-lg font-semibold text-lg shadow-lg hover:bg-[#3578c4] transition-all duration-300 glow inline-flex items-center"
+              className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-10 py-3 rounded-lg font-semibold shadow-md transition duration-300"
             >
               Unlock Your Trial
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-5 h-5 ml-2" />
             </button>
-            <p className="text-sm text-gray-400 mt-4">
-            No hidden fees • 7 days for free • Cancel anytime
-
+            <p className="text-sm text-gray-500 mt-4">
+              No hidden fees • 7 days for free • Cancel anytime
             </p>
           </div>
-        </div>
+        </section>
       </div>
-    </div>
     </>
   );
 }

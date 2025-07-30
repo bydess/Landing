@@ -99,7 +99,11 @@ export default function Landing() {
       />
     <div className="min-h-screen bg-[#0F1116]  relative overflow-hidden">
      {/* Background Blobs */}
-<div className="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+  {/* Blobs globally fixed (place once at top of page) */}
+  <div className="fixed inset-0 pointer-events-none -z-10">
+    <div className="absolute top-10 left-1/3 w-56 h-56 bg-blue-500 rounded-full filter blur-3xl opacity-20 animate-float" />
+    <div className="absolute top-1/2 right-1/4 w-40 h-40 bg-cyan-500 rounded-full filter blur-2xl opacity-20 animate-float-slow" />
+    <div className="absolute bottom-10 left-1/4 w-52 h-52 bg-blue-500 rounded-full filter blur-3xl opacity-15 animate-float-reverse" />
   <div className="absolute top-10 left-10 w-40 h-40 bg-blue-500 rounded-full filter blur-3xl opacity-30 animate-pulse" />
   <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-blue-500 rounded-full filter blur-2xl opacity-25 animate-pulse delay-200" />
   <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-cyan-500 rounded-full filter blur-2xl opacity-20 animate-pulse delay-300" />
@@ -323,82 +327,83 @@ export default function Landing() {
   </div>
 </div>
 
+  {/* Job Roles Section */}
+  <div className="relative py-24 overflow-hidden bg-[#0F1116]">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="text-center mb-16">
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          Built for Every Professional
+        </h2>
+        <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+          Tailored solutions for every type of self-employed professional
+        </p>
+      </div>
 
-{/* Job Roles Section */}
-<div className="relative py-24 overflow-hidden bg-[#0F1116]">
-  {/* Multiple Soft Blue Glows */}
-  <div className="fixed inset-0 pointer-events-none z-0">
-    <div className="absolute top-10 left-[15%] w-40 h-40 rounded-full bg-blue-500 opacity-20 blur-3xl" />
-    <div className="absolute top-1/2 right-[20%] w-32 h-32 rounded-full bg-blue-500 opacity-25 blur-2xl" />
-    <div className="absolute bottom-1/4 left-[30%] w-28 h-28 rounded-full bg-blue-500 opacity-30 blur-2xl" />
-    <div className="absolute bottom-[10%] right-[15%] w-36 h-36 rounded-full bg-blue-500 opacity-15 blur-3xl" />
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        {[
+          {
+            image: "https://i.postimg.cc/gcRjhyV2/okay3.png",
+            role: "Freelancer",
+            description: "Streamline invoicing and expense tracking to focus on what you do best."
+          },
+          {
+            image: "https://i.postimg.cc/xCNCtMBg/okay2.png",
+            role: "Consultant",
+            description: "Generate a clear financial report and simplify tax preparation."
+          },
+          {
+            image: "https://i.postimg.cc/qq87d0J3/okay5.png",
+            role: "Small Business Owner",
+            description: "Manage expenses and monitor business growth efficiently."
+          }
+        ].map(({ image, role, description }) => (
+          <div key={role} className="group relative rounded-xl overflow-hidden border border-blue-500/30 bg-[#1a1d25]/70 backdrop-blur-sm shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer">
+            <img
+              src={image}
+              alt={role}
+              className="w-full h-64 object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-300"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0F1116] via-[#0F1116]/80 to-transparent" />
+            <div className="absolute inset-0 p-6 flex flex-col justify-end">
+              <h3 className="text-xl font-semibold text-white mb-2">{role}</h3>
+              <p className="text-gray-300">{description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        {[
+          {
+            image: "https://i.postimg.cc/PfMsW531/okay.png",
+            role: "Contractor",
+            description: "Track multiple income streams and maximize tax deductions."
+          },
+          {
+            image: "https://i.postimg.cc/Gt0pN9CR/okay4.png",
+            role: "Remote Worker",
+            description: "Monitor expenses and cash flow for your personal projects."
+          }
+        ].map(({ image, role, description }) => (
+          <div key={role} className="group relative rounded-xl overflow-hidden border border-blue-500/30 bg-[#1a1d25]/70 backdrop-blur-sm shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer">
+            <img
+              src={image}
+              alt={role}
+              className="w-full h-64 object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-300"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0F1116] via-[#0F1116]/80 to-transparent" />
+            <div className="absolute inset-0 p-6 flex flex-col justify-end">
+              <h3 className="text-xl font-semibold text-white mb-2">{role}</h3>
+              <p className="text-gray-300">{description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   </div>
-
-  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="text-center mb-16">
-      <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-        Built for Every Professional
-      </h2>
-      <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-        Tailored solutions for every type of self-employed professional
-      </p>
-    </div>
-
-    {/* Top 3 roles */}
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-      {[
-        {
-          image: "https://i.postimg.cc/gcRjhyV2/okay3.png",
-          role: "Freelancer",
-          description: "Streamline invoicing and expense tracking to focus on what you do best."
-        },
-        {
-          image: "https://i.postimg.cc/xCNCtMBg/okay2.png",
-          role: "Consultant",
-          description: "Generate a clear financial report and simplify tax preparation."
-        },
-        {
-          image: "https://i.postimg.cc/qq87d0J3/okay5.png",
-          role: "Small Business Owner",
-          description: "Manage expenses and monitor business growth efficiently."
-        }
-      ].map(({ image, role, description }) => (
-        <div key={role} className="group relative rounded-xl overflow-hidden border border-blue-500/10 bg-[#1a1d25]/50 backdrop-blur-lg transition-all hover:scale-[1.01]">
-          <img src={image} alt={role} className="absolute inset-0 w-full h-full object-cover opacity-30" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0F1116] via-[#0F1116]/80 to-transparent" />
-          <div className="relative z-10 p-6 flex flex-col justify-end h-64">
-            <h3 className="text-xl font-semibold text-white mb-2">{role}</h3>
-            <p className="text-gray-300">{description}</p>
-          </div>
-        </div>
-      ))}
-    </div>
-
-    {/* Bottom 2 roles */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-      {[
-        {
-          image: "https://i.postimg.cc/PfMsW531/okay.png",
-          role: "Contractor",
-          description: "Track multiple income streams and maximize tax deductions."
-        },
-        {
-          image: "https://i.postimg.cc/Gt0pN9CR/okay4.png",
-          role: "Remote Worker",
-          description: "Monitor expenses and cash flow for your personal projects."
-        }
-      ].map(({ image, role, description }) => (
-        <div key={role} className="group relative rounded-xl overflow-hidden border border-blue-500/10 bg-[#1a1d25]/50 backdrop-blur-lg transition-all hover:scale-[1.01]">
-          <img src={image} alt={role} className="absolute inset-0 w-full h-full object-cover opacity-30" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0F1116] via-[#0F1116]/80 to-transparent" />
-          <div className="relative z-10 p-6 flex flex-col justify-end h-64">
-            <h3 className="text-xl font-semibold text-white mb-2">{role}</h3>
-            <p className="text-gray-300">{description}</p>
-          </div>
-        </div>
-      ))}
-
-
+</>
 
 
       {/* Why Choose Us Section */}

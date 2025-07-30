@@ -522,35 +522,37 @@ export default function Landing() {
 </div>
 
 
-      {/* Final CTA Section */}
-      <div className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-[#1a1d25]/30 blur-effect" />
-        <div className="absolute inset-0">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] gradient-blur opacity-20" />
-        </div>
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Financial Management?
-            </h2>
-            <p className="text-lg text-gray-300 mb-8">
-              Join other self-employed professionals who have simplified their business finances with PAYZIO.
-            </p>
-            <button
-              onClick={() => (window.location.href = 'https://app.payzio.io/auth')}
-              className="group bg-[#2f68b4] text-white px-8 py-3 rounded-lg font-semibold text-lg shadow-lg hover:bg-[#3578c4] transition-all duration-300 glow inline-flex items-center"
-            >
-              Unlock Your Trial
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <p className="text-sm text-gray-400 mt-4">
-            No hidden fees • 7 days for free • Cancel anytime
+{/* Final CTA Section */}
+<div className="relative pt-32 pb-20 bg-[#0F1116] overflow-hidden text-white">
+  {/* Blobs */}
+  <div className="absolute inset-0 pointer-events-none -z-10">
+    <div className="absolute top-1/3 left-1/4 w-48 h-48 rounded-full bg-gradient-to-tr from-blue-500 via-cyan-400 to-blue-400 filter blur-3xl opacity-20 animate-float" />
+    <div className="absolute top-1/2 right-1/4 w-56 h-56 rounded-full bg-gradient-to-br from-cyan-500 via-blue-500 to-cyan-400 filter blur-2xl opacity-25 animate-float-slow" />
+    <div className="absolute bottom-20 left-1/3 w-52 h-52 rounded-full bg-gradient-to-tr from-blue-400 via-cyan-400 to-blue-500 filter blur-3xl opacity-15 animate-float-reverse" />
+  </div>
 
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+  {/* Overlay blur */}
+  <div className="absolute inset-0 bg-[#1a1d25]/30 blur-effect -z-5" />
+
+  <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+    <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      Ready to Transform Your Financial Management?
+    </h2>
+    <p className="text-lg text-gray-300 mb-8">
+      Join other self-employed professionals who have simplified their business finances with PAYZIO.
+    </p>
+    <button
+      onClick={() => (window.location.href = 'https://app.payzio.io/auth')}
+      className="group bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-full font-semibold text-lg shadow-lg hover:opacity-90 transition-all duration-300 inline-flex items-center justify-center"
+    >
+      Unlock Your Trial
+      <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+    </button>
+    <p className="text-sm text-gray-400 mt-4">
+      No hidden fees • 7 days for free • Cancel anytime
+    </p>
+  </div>
+</div>
     </>
   );
 }

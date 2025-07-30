@@ -404,7 +404,6 @@ export default function Landing() {
       </div>
     </div>
   </div>
-      </div>
 
       {/* Why Choose Us Section */}
       <div className="relative py-24 overflow-hidden">

@@ -124,7 +124,7 @@ export default function Pricing() {
             >
               Start My Trial <ArrowRight className="w-5 h-5 ml-2" />
             </button>
-            <p className="text-sm text-gray-400 mt-4">
+            <p className="text-sm text-gray-400 mt-2">
               After the trial, continue for just $15/month or save with $150/year. Cancel anytime with no hassle.
             </p>
           </div>

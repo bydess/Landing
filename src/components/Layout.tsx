@@ -158,6 +158,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
   </div>
+</div>
       </footer>
 
       {/* Tailwind custom gradient utility */}

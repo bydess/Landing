@@ -97,7 +97,11 @@ export default function Landing() {
           }
         }}
       />
-    <div className="min-h-screen bg-[#0F1116] relative overflow-hidden">
+    <div className="fixed inset-0 pointer-events-none -z-10">
+    <div className="absolute top-10 left-1/3 w-56 h-56 bg-blue-500 rounded-full filter blur-3xl opacity-20 animate-float" />
+    <div className="absolute top-1/2 right-1/4 w-40 h-40 bg-cyan-500 rounded-full filter blur-2xl opacity-20 animate-float-slow" />
+    <div className="absolute bottom-10 left-1/4 w-52 h-52 bg-blue-500 rounded-full filter blur-3xl opacity-15 animate-float-reverse" />
+  </div>
      {/* Background Blobs */}
 <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10">
   <div className="absolute top-10 left-10 w-40 h-40 bg-blue-500 rounded-full filter blur-3xl opacity-30 animate-pulse" />

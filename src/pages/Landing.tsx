@@ -107,7 +107,6 @@ export default function Landing() {
   <div className="absolute bottom-10 right-10 w-36 h-36 bg-blue-500 rounded-full filter blur-3xl opacity-25 animate-pulse delay-700" />
 </div>
 
-
       {/* Hero Section */}
       <div className="relative pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">

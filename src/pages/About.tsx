@@ -94,7 +94,7 @@ export default function About() {
 
           <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
             {/* Other Apps */}
-            <div className="bg-[#1a1d25]/60 rounded-2xl p-10 border border-gray-800 shadow-lg">
+            <div className="bg-[#1a1d25]/60 rounded-2xl p-10 border border-gray-800 shadow-lg relative'>
               <div className="absolute -top-3 -right-3 bg-gray-800 text-gray-400 px-4 py-1 rounded-full text-sm select-none pointer-events-none">
                 Other Apps
               </div>

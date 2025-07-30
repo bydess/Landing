@@ -138,7 +138,7 @@ export default function Features() {
             </div>
 
             {/* CTA */}
-            <div className="mt-16 pb-4 text-center">
+            <div className="mt-16 pb-0 text-center">
               <h2 className="text-3xl font-bold mb-4">Take control of your business finances today</h2>
               <p className="text-lg text-gray-300 mb-8 max-w-xl mx-auto">
                 Join PAYZIO and experience the smarter way to manage your money.

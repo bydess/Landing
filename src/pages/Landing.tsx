@@ -315,9 +315,6 @@ export default function Landing() {
           </div>
           <h3 className="text-xl font-semibold text-white mb-4">{title}</h3>
           <p className="text-gray-300 leading-relaxed">{description}</p>
-          <button className="mt-6 px-6 py-2 rounded-full text-white bg-gradient-to-r from-blue-500 to-cyan-500 hover:opacity-90 transition">
-            Learn More
-          </button>
         </div>
       ))}
     </div>

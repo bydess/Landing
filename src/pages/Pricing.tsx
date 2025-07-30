@@ -25,7 +25,7 @@ export default function Pricing() {
         url="https://payzio.io/pricing"
       />
 
-      <div className="relative pt-32 pb-20 bg-[#0F1116] overflow-hidden text-white min-h-screen">
+      <div className="fixed pt-32 pb-20 bg-[#0F1116] overflow-hidden text-white min-h-screen">
 
         {/* Blobs */}
         <div className="absolute inset-0 -z-10 pointer-events-none">

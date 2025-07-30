@@ -97,415 +97,344 @@ export default function Landing() {
           }
         }}
       />
-  <div className="min-h-screen bg-[#0F1116] relative overflow-hidden font-sans">
-  {/* Background Gradient Blurs */}
-  <div className="fixed inset-0 overflow-hidden pointer-events-none">
-    <div className="absolute top-0 left-1/4 w-[400px] h-[400px] rounded-full bg-gradient-to-tr from-[#2f68b4] to-[#6eb1ff] opacity-30 blur-3xl animate-blob" />
-    <div className="absolute top-1/3 right-1/4 w-[300px] h-[300px] rounded-full bg-gradient-to-br from-[#ff7e5f] to-[#feb47b] opacity-20 blur-2xl animate-blob animation-delay-2000" />
-    <div className="absolute bottom-1/4 left-1/3 w-[350px] h-[350px] rounded-full bg-gradient-to-tl from-[#43cea2] to-[#185a9d] opacity-25 blur-3xl animate-blob animation-delay-4000" />
-  </div>
-
-  {/* Hero Section */}
-  <div className="relative pt-32 pb-20 z-10">
-    <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
-      <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-white leading-tight tracking-tight drop-shadow-lg">
-        Streamline Your Business
-        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#2f68b4] via-[#4a90e2] to-[#6eb1ff] mt-3">
-          Finances Made Simple
-        </span>
-      </h1>
-
-      <p className="max-w-3xl mx-auto mt-8 text-xl sm:text-2xl text-gray-300 leading-relaxed">
-        All-in-one platform for managing estimates, invoices, expenses, and mileage tracking.
-        Perfect for independent contractors and freelancers.
-      </p>
-
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto mt-16 mb-14">
-        {[
-          { icon: FileText, label: "Estimates" },
-          { icon: Receipt, label: "Invoices" },
-          { icon: DollarSign, label: "Expenses" },
-          { icon: Car, label: "Mileage" }
-        ].map(({ icon: Icon, label }) => (
-          <div
-            key={label}
-            className="flex flex-col items-center text-gray-300 transition-transform transform hover:scale-105"
-          >
-            <div className="bg-gradient-to-tr from-[#2f68b4]/80 to-[#6eb1ff]/70 p-5 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-              <Icon className="w-8 h-8 text-white" />
-            </div>
-            <span className="mt-3 text-base font-semibold tracking-wide">{label}</span>
-          </div>
-        ))}
-      </div>
-
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mt-6">
-        <button
-          onClick={() => (window.location.href = 'https://app.payzio.io/auth')}
-          className="group relative inline-flex items-center justify-center px-10 py-3 rounded-full bg-gradient-to-r from-[#2f68b4] to-[#6eb1ff] text-white font-semibold text-lg shadow-lg hover:from-[#3578c4] hover:to-[#8fb5ff] transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[#2f68b4]/50"
-        >
-          Simplify Your Business Now
-          <ArrowRight className="w-6 h-6 ml-3 transition-transform group-hover:translate-x-2" />
-          <span className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-[#6eb1ff] to-[#2f68b4] opacity-0 group-hover:opacity-50 blur-lg transition duration-300" />
-        </button>
-        <p className="text-gray-400 text-sm max-w-xs text-center sm:text-left">
-          No hidden fees • 7 days for free • Cancel anytime
-        </p>
-      </div>
-    </div>
-  </div>
-
-  {/* Common Frustrations Section */}
-  <section className="relative py-24 overflow-hidden">
-    <div className="absolute inset-0 bg-[#1a1d25]/60 backdrop-blur-sm rounded-3xl" />
-    <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-extrabold text-white drop-shadow-lg mb-4">
-          Tired of Financial Software That Holds You Back?
-        </h2>
-        <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          We understand your frustrations. That's why we built Payzio differently.
-        </p>
-      </div>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mb-20">
-        {[
-          {
-            icon: Frown,
-            title: "The Old Way",
-            points: [
-              "Overwhelming features you never use",
-              "Hidden costs and expensive tiers",
-              "Confusing, cluttered interfaces",
-              "Complex data sharing with accountants",
-              "Time wasted on unnecessary complexity"
-            ]
-          },
-          {
-            icon: ArrowUpRight,
-            title: "Make the Switch",
-            points: [
-              "Focus on essential tools that matter",
-              "One simple, transparent price",
-              "Clean, intuitive design",
-              "Easy data exports for tax time",
-              "Save hours every month"
-            ]
-          },
-          {
-            icon: Smile,
-            title: "The Payzio Way",
-            points: [
-              "Just the features you need",
-              "Everything included for $15/month",
-              "Simple, beautiful interface",
-              "Accountant-friendly exports",
-              "Get more done in less time"
-            ]
-          }
-        ].map(({ icon: Icon, title, points }) => (
-          <div
-            key={title}
-            className="bg-[#1a1d25]/70 rounded-3xl p-10 shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-[#2f68b4]/30 backdrop-blur-md transform hover:-translate-y-1"
-          >
-            <div className="bg-gradient-to-br from-[#2f68b4]/60 to-[#6eb1ff]/40 w-16 h-16 rounded-xl flex items-center justify-center mb-8 mx-auto">
-              <Icon className="w-10 h-10 text-white drop-shadow-md" />
-            </div>
-            <h3 className="text-2xl font-bold text-white mb-6 text-center">{title}</h3>
-            <ul className="space-y-3 text-gray-300 max-w-md mx-auto">
-              {points.map((point, idx) => (
-                <li key={idx} className="flex items-start space-x-3">
-                  <span className="w-3 h-3 mt-2 rounded-full bg-gradient-to-r from-[#2f68b4] to-[#6eb1ff]" />
-                  <p className="leading-relaxed">{point}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-
-      <div className="text-center">
-        <button
-          onClick={() => (window.location.href = 'https://app.payzio.io/auth')}
-          className="group inline-flex items-center px-10 py-3 rounded-full bg-gradient-to-r from-[#2f68b4] to-[#6eb1ff] text-white font-semibold text-lg shadow-lg hover:from-[#3578c4] hover:to-[#8fb5ff] transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[#2f68b4]/50"
-        >
-          Try a Better Way
-          <ArrowRight className="w-6 h-6 ml-3 transition-transform group-hover:translate-x-2" />
-          <span className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-[#6eb1ff] to-[#2f68b4] opacity-0 group-hover:opacity-40 blur-xl transition duration-300" />
-        </button>
-        <p className="text-sm text-gray-400 mt-4 font-medium">
-          Join thousands of satisfied users who made the switch
-        </p>
-      </div>
-    </div>
-  </section>
-
-  {/* Features Section */}
-  <section className="relative py-24 overflow-hidden">
-    <div className="absolute inset-0 bg-[#1a1d25]/60 backdrop-blur-md rounded-3xl" />
-    <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-extrabold text-white drop-shadow-lg mb-4">
-          Everything You Need to Succeed
-        </h2>
-        <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          Powerful features designed to help you manage your business finances with ease
-        </p>
-      </div>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-        {[
-          {
-            icon: Receipt,
-            title: "Smart Invoice Creation",
-            description: "Create professional invoices in seconds and track payments."
-          },
-          {
-            icon: Calculator,
-            title: "Expense Management",
-            description: "Log and categorize expenses for easy budgeting and tax preparation."
-          },
-          {
-            icon: FileText,
-            title: "Accountant-Ready Exports",
-            description: "Export financial data in CSV for your accountant easily."
-          },
-          {
-            icon: DollarSign,
-            title: "Self-Payment Tracking",
-            description: "Record and monitor your business income withdrawals accurately."
-          },
-          {
-            icon: Car,
-            title: "Vehicle & Mileage Tracking",
-            description: "Track business mileage and calculate vehicle depreciation for tax deductions."
-          },
-          {
-            icon: Clock,
-            title: "Time Savings",
-            description: "Save time with entries and focus on what matters most, growing your business."
-          }
-        ].map(({ icon: Icon, title, description }) => (
-          <div
-            key={title}
-            className="bg-[#1a1d25]/70 rounded-3xl p-10 shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-[#2f68b4]/30 backdrop-blur-md transform hover:-translate-y-1"
-          >
-            <div className="bg-gradient-to-br from-[#2f68b4]/60 to-[#6eb1ff]/40 w-16 h-16 rounded-xl flex items-center justify-center mb-8 mx-auto">
-              <Icon className="w-10 h-10 text-white drop-shadow-md" />
-            </div>
-            <h3 className="text-2xl font-bold text-white mb-4 text-center">{title}</h3>
-            <p className="text-gray-300 leading-relaxed text-center">{description}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  {/* Job Roles Section */}
-  <section className="relative py-24 overflow-hidden">
-    <div className="absolute inset-0 bg-[#0F1116]" />
-    <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-extrabold text-white drop-shadow-lg mb-4">
-          Built for Every Professional
-        </h2>
-        <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          Tailored solutions for every type of self-employed professional
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
-        {[
-          {
-            image: "https://i.postimg.cc/gcRjhyV2/okay3.png",
-            role: "Freelancer",
-            description: "Streamline invoicing and expense tracking to focus on what you do best."
-          },
-          {
-            image: "https://i.postimg.cc/xCNCtMBg/okay2.png",
-            role: "Consultant",
-            description: "Generate a clear financial report and simplify tax preparation."
-          },
-          {
-            image: "https://i.postimg.cc/qq87d0J3/okay5.png",
-            role: "Small Business Owner",
-            description: "Manage expenses and monitor business growth efficiently."
-          }
-        ].map(({ image, role, description }) => (
-          <div key={role} className="group relative rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-[#2f68b4]/30 bg-[#1a1d25]/80 backdrop-blur-md">
-            <img
-              src={image}
-              alt={role}
-              className="w-full h-64 object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-300"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0F1116]/90 via-[#0F1116]/70 to-transparent" />
-            <div className="absolute inset-0 p-6 flex flex-col justify-end">
-              <h3 className="text-2xl font-bold text-white mb-2">{role}</h3>
-              <p className="text-gray-300 text-base">{description}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        {[
-          {
-            image: "https://i.postimg.cc/PfMsW531/okay.png",
-            role: "Contractor",
-            description: "Track multiple income streams and maximize tax deductions."
-          },
-          {
-            image: "https://i.postimg.cc/Gt0pN9CR/okay4.png",
-            role: "Remote Worker",
-            description: "Monitor expenses and cash flow for your personal projects."
-          }
-        ].map(({ image, role, description }) => (
-          <div key={role} className="group relative rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-[#2f68b4]/30 bg-[#1a1d25]/80 backdrop-blur-md">
-            <img
-              src={image}
-              alt={role}
-              className="w-full h-64 object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-300"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0F1116]/90 via-[#0F1116]/70 to-transparent" />
-            <div className="absolute inset-0 p-6 flex flex-col justify-end">
-              <h3 className="text-2xl font-bold text-white mb-2">{role}</h3>
-              <p className="text-gray-300 text-base">{description}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  {/* Why Choose Us Section */}
-  <section className="relative py-24 overflow-hidden">
-    <div className="absolute inset-0 bg-[#1a1d25]/60 backdrop-blur-md rounded-3xl" />
-    <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-extrabold text-white drop-shadow-lg mb-6">
-          Why Choose PAYZIO?
-        </h2>
-        <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          Built with self-employed professionals in mind, our platform combines simplicity with powerful features
-        </p>
-      </div>
-
-      <div className="grid md:grid-cols-3 gap-10">
-        {[
-          {
-            icon: Zap,
-            title: "Built for Speed",
-            description:
-              "Streamlined workflows and intuitive design help you manage finances in minutes, not hours."
-          },
-          {
-            icon: Users,
-            title: "Self-Employed First",
-            description: "Every feature is tailored for independent professionals, because we understand your unique needs."
-          },
-          {
-            icon: Sparkles,
-            title: "Grows With You",
-            description:
-              "From solo freelancer to small business owner, our platform scales seamlessly as your business expands."
-          }
-        ].map(({ icon: Icon, title, description }) => (
-          <div
-            key={title}
-            className="bg-[#1a1d25]/70 rounded-3xl p-10 shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-[#2f68b4]/30 backdrop-blur-md transform hover:-translate-y-1"
-          >
-            <div className="bg-gradient-to-br from-[#2f68b4]/60 to-[#6eb1ff]/40 w-20 h-20 rounded-full flex items-center justify-center mb-8 mx-auto">
-              <Icon className="w-10 h-10 text-white drop-shadow-md" />
-            </div>
-            <h3 className="text-2xl font-bold text-white mb-4 text-center">{title}</h3>
-            <p className="text-gray-300 leading-relaxed text-center">{description}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  {/* FAQ Section */}
-  <section className="relative py-24 overflow-hidden">
-    <div className="absolute inset-0 bg-[#1a1d25]/60 backdrop-blur-md rounded-3xl" />
-    <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-extrabold text-white drop-shadow-lg mb-4">
-          Frequently Asked Questions
-        </h2>
-        <p className="text-lg text-gray-300">
-          Find answers to common questions about Payzio
-        </p>
-      </div>
-
-      <div className="space-y-5">
-        {faqs.map((faq, index) => (
-          <div
-            key={index}
-            className="bg-[#1a1d25]/70 rounded-3xl border border-[#2f68b4]/30 shadow-lg backdrop-blur-md overflow-hidden transition-all duration-300"
-          >
-            <button
-              onClick={() => toggleFaq(index)}
-              className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-[#2f68b4]/20 transition-colors focus:outline-none"
-            >
-              <span className="text-white font-semibold text-lg">{faq.question}</span>
-              <ChevronDown
-                className={`w-6 h-6 text-[#6eb1ff] transition-transform duration-300 ${
-                  openFaq === index ? 'rotate-180' : ''
-                }`}
-              />
-            </button>
-            <div
-              className={`px-6 overflow-hidden transition-max-height duration-300 ${
-                openFaq === index ? 'max-h-96 py-4' : 'max-h-0'
-              }`}
-            >
-              <p className="text-gray-300 text-base leading-relaxed">{faq.answer}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <div className="mt-14 text-center">
-        <div className="inline-flex flex-col items-center">
-          <p className="text-gray-300 mb-5 text-lg font-medium">Still have questions?</p>
-          <button
-            onClick={() => handleExternalLink('mailto:support@payzio.io')}
-            className="group inline-flex items-center px-10 py-3 rounded-full bg-[#1a1d25] text-white font-semibold border border-[#2f68b4]/30 hover:bg-[#2f68b4]/30 transition duration-300 shadow-md focus:outline-none focus:ring-4 focus:ring-[#2f68b4]/40"
-          >
-            <MessageCircle className="w-6 h-6 mr-3 text-[#6eb1ff]" />
-            Contact Support
-            <ArrowRight className="w-6 h-6 ml-3 transition-transform group-hover:translate-x-2" />
-          </button>
+      <div className="min-h-screen bg-gradient-to-b from-[#12151a] via-[#0F1116] to-[#0B0C0F] relative overflow-hidden text-gray-300">
+        {/* Background Gradient Blurs */}
+        <div className="fixed inset-0 pointer-events-none">
+          <div className="absolute top-0 left-1/4 w-[420px] h-[420px] rounded-full bg-gradient-to-tr from-[#3a6bdb] to-[#1f3fa3] opacity-30 filter blur-3xl animate-blob" />
+          <div className="absolute top-1/3 right-1/4 w-[320px] h-[320px] rounded-full bg-gradient-to-br from-[#2961e6] to-[#11307a] opacity-20 filter blur-2xl animate-blob animation-delay-2000" />
+          <div className="absolute bottom-1/4 left-1/3 w-[370px] h-[370px] rounded-full bg-gradient-to-tl from-[#4170e7] to-[#1e3e90] opacity-25 filter blur-3xl animate-blob animation-delay-4000" />
         </div>
-      </div>
-    </div>
-  </section>
 
-  {/* Final CTA Section */}
-  <section className="relative py-24 overflow-hidden">
-    <div className="absolute inset-0 bg-[#1a1d25]/40 backdrop-blur-md rounded-3xl" />
-    <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
-      <div className="w-[600px] h-[600px] rounded-full bg-gradient-to-tr from-[#2f68b4] to-[#6eb1ff] opacity-20 blur-3xl animate-blob" />
-    </div>
-    <div className="max-w-3xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10 text-center">
-      <h2 className="text-4xl font-extrabold text-white drop-shadow-lg mb-6">
-        Ready to Transform Your Financial Management?
-      </h2>
-      <p className="text-lg sm:text-xl text-gray-300 mb-10 leading-relaxed">
-        Join other self-employed professionals who have simplified their business finances with PAYZIO.
-      </p>
-      <button
-        onClick={() => (window.location.href = 'https://app.payzio.io/auth')}
-        className="group inline-flex items-center px-12 py-4 rounded-full bg-gradient-to-r from-[#2f68b4] to-[#6eb1ff] text-white font-semibold text-xl shadow-lg hover:from-[#3578c4] hover:to-[#8fb5ff] transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[#2f68b4]/50"
-      >
-        Unlock Your Trial
-        <ArrowRight className="w-7 h-7 ml-4 transition-transform group-hover:translate-x-3" />
-        <span className="absolute -inset-1 rounded-full bg-gradient-to-r from-[#6eb1ff] to-[#2f68b4] opacity-0 group-hover:opacity-40 blur-xl transition duration-300" />
-      </button>
-      <p className="text-sm text-gray-400 mt-6 font-medium">
-        No hidden fees • 7 days for free • Cancel anytime
-      </p>
-    </div>
-  </section>
-</div>
+        {/* Hero Section */}
+        <div className="relative pt-32 pb-24 z-10">
+          <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 text-center">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white leading-tight">
+              Streamline Your Business<br />
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#4facfe] to-[#00f2fe] mt-3">Finances Made Simple</span>
+            </h1>
+
+            <p className="max-w-3xl mx-auto mt-6 text-xl sm:text-2xl text-gray-300">
+              All-in-one platform for managing estimates, invoices, expenses, and mileage tracking. Perfect for independent contractors and freelancers.
+            </p>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto mt-14">
+              {[
+                { icon: FileText, label: "Estimates" },
+                { icon: Receipt, label: "Invoices" },
+                { icon: DollarSign, label: "Expenses" },
+                { icon: Car, label: "Mileage" }
+              ].map(({ icon: Icon, label }) => (
+                <div key={label} className="flex flex-col items-center space-y-3">
+                  <div className="bg-gradient-to-br from-[#4facfe]/50 to-[#00f2fe]/40 p-5 rounded-full shadow-lg hover:scale-110 transition-transform duration-300 cursor-default">
+                    <Icon className="w-8 h-8 text-white drop-shadow-lg" />
+                  </div>
+                  <span className="text-base font-semibold text-white">{label}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-6">
+              <button
+                onClick={() => (window.location.href = 'https://app.payzio.io/auth')}
+                className="group inline-flex items-center justify-center bg-gradient-to-r from-[#4facfe] to-[#00f2fe] text-black font-bold rounded-full px-10 py-4 shadow-lg hover:from-[#3aa7ff] hover:to-[#00e0f9] transition duration-300 transform hover:scale-[1.05]"
+              >
+                Simplify Your Business Now
+                <ArrowRight className="w-6 h-6 ml-3 text-black group-hover:translate-x-2 transition-transform duration-300" />
+              </button>
+
+              <p className="text-gray-400 text-sm max-w-xs text-center sm:text-left">
+                No hidden fees &bull; 7 days free trial &bull; Cancel anytime
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Common Frustrations Section */}
+        <section className="relative py-24">
+          <div className="absolute inset-0 bg-[#12151a]/70 filter blur-xl rounded-xl" />
+          <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 relative z-10">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="text-4xl font-extrabold text-white mb-5">
+                Tired of Financial Software That Holds You Back?
+              </h2>
+              <p className="text-lg text-gray-300">
+                We understand your frustrations. That's why we built Payzio differently.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+              {[
+                {
+                  icon: Frown,
+                  title: "The Old Way",
+                  points: [
+                    "Overwhelming features you never use",
+                    "Hidden costs and expensive tiers",
+                    "Confusing, cluttered interfaces",
+                    "Complex data sharing with accountants",
+                    "Time wasted on unnecessary complexity"
+                  ]
+                },
+                {
+                  icon: ArrowUpRight,
+                  title: "Make the Switch",
+                  points: [
+                    "Focus on essential tools that matter",
+                    "One simple, transparent price",
+                    "Clean, intuitive design",
+                    "Easy data exports for tax time",
+                    "Save hours every month"
+                  ]
+                },
+                {
+                  icon: Smile,
+                  title: "The Payzio Way",
+                  points: [
+                    "Just the features you need",
+                    "Everything included for $15/month",
+                    "Simple, beautiful interface",
+                    "Accountant-friendly exports",
+                    "Get more done in less time"
+                  ]
+                }
+              ].map(({ icon: Icon, title, points }) => (
+                <div key={title} className="bg-[#1a1f2e] rounded-3xl p-10 shadow-lg hover:shadow-[#2f68b4]/70 transition-shadow duration-300 border border-[#2f68b4]/30">
+                  <div className="bg-gradient-to-br from-[#4facfe]/20 to-[#00f2fe]/20 w-20 h-20 rounded-2xl flex items-center justify-center mb-6 shadow-inner">
+                    <Icon className="w-10 h-10 text-[#4facfe]" />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-white mb-6">{title}</h3>
+                  <ul className="space-y-3 text-gray-300">
+                    {points.map((point, i) => (
+                      <li key={i} className="flex items-start space-x-3">
+                        <span className="w-3 h-3 mt-1 rounded-full bg-gradient-to-r from-[#4facfe] to-[#00f2fe]" />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-16 text-center">
+              <button
+                onClick={() => (window.location.href = 'https://app.payzio.io/auth')}
+                className="inline-flex items-center bg-gradient-to-r from-[#4facfe] to-[#00f2fe] text-black font-bold rounded-full px-12 py-4 shadow-xl hover:from-[#3aa7ff] hover:to-[#00e0f9] transition duration-300 transform hover:scale-105"
+              >
+                Try a Better Way
+                <ArrowRight className="w-6 h-6 ml-4 text-black group-hover:translate-x-2 transition-transform duration-300" />
+              </button>
+              <p className="mt-4 text-sm text-gray-400 max-w-xs mx-auto">
+                Join thousands of satisfied users who made the switch
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="relative py-24">
+          <div className="absolute inset-0 bg-[#12151a]/60 filter blur-xl rounded-xl" />
+          <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 relative z-10">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="text-4xl font-extrabold text-white mb-5">
+                Everything You Need to Succeed
+              </h2>
+              <p className="text-lg text-gray-300">
+                Powerful features designed to help you manage your business finances with ease
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+              {[
+                {
+                  icon: Receipt,
+                  title: "Smart Invoice Creation",
+                  description: "Create professional invoices in seconds and track payments."
+                },
+                {
+                  icon: Calculator,
+                  title: "Expense Management",
+                  description: "Log and categorize expenses for easy budgeting and tax preparation."
+                },
+                {
+                  icon: FileText,
+                  title: "Accountant-Ready Exports",
+                  description: "Export financial data in CSV for your accountant easily."
+                },
+                {
+                  icon: DollarSign,
+                  title: "Self-Payment Tracking",
+                  description: "Record and monitor your business income withdrawals accurately."
+                },
+                {
+                  icon: Car,
+                  title: "Vehicle & Mileage Tracking",
+                  description: "Track business mileage and calculate vehicle depreciation for tax deductions."
+                },
+                {
+                  icon: Clock,
+                  title: "Time Savings",
+                  description: "Save time with entries and focus on what matters most, growing your business."
+                }
+              ].map(({ icon: Icon, title, description }) => (
+                <div key={title} className="bg-[#1a1f2e] rounded-3xl p-10 shadow-lg hover:shadow-[#2f68b4]/70 transition-shadow duration-300 border border-[#2f68b4]/30">
+                  <div className="bg-gradient-to-br from-[#4facfe]/20 to-[#00f2fe]/20 w-20 h-20 rounded-2xl flex items-center justify-center mb-6 shadow-inner">
+                    <Icon className="w-10 h-10 text-[#4facfe]" />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-white mb-4">{title}</h3>
+                  <p className="text-gray-300 leading-relaxed">{description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Job Roles Section */}
+        <section className="relative py-24 bg-[#0f1116]">
+          <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 relative z-10">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="text-4xl font-extrabold text-white mb-5">
+                Built for Every Professional
+              </h2>
+              <p className="text-lg text-gray-300">
+                Tailored solutions for every type of self-employed professional
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
+              {[
+                {
+                  image: "https://i.postimg.cc/gcRjhyV2/okay3.png",
+                  role: "Freelancer",
+                  description: "Streamline invoicing and expense tracking to focus on what you do best."
+                },
+                {
+                  image: "https://i.postimg.cc/xCNCtMBg/okay2.png",
+                  role: "Consultant",
+                  description: "Generate a clear financial report and simplify tax preparation."
+                },
+                {
+                  image: "https://i.postimg.cc/qq87d0J3/okay5.png",
+                  role: "Small Business Owner",
+                  description: "Manage expenses and monitor business growth efficiently."
+                }
+              ].map(({ image, role, description }) => (
+                <div key={role} className="group relative rounded-3xl overflow-hidden shadow-lg hover:shadow-[#2f68b4]/60 transition-shadow duration-300 border border-[#2f68b4]/30">
+                  <img src={image} alt={role} className="w-full h-64 object-cover opacity-70 group-hover:opacity-90 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0f1116] via-[#0f1116]/90 to-transparent p-6 flex flex-col justify-end">
+                    <h3 className="text-2xl font-semibold text-white mb-2">{role}</h3>
+                    <p className="text-gray-300">{description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+              {[
+                {
+                  image: "https://i.postimg.cc/PfMsW531/okay.png",
+                  role: "Contractor",
+                  description: "Track multiple income streams and maximize tax deductions."
+                },
+                {
+                  image: "https://i.postimg.cc/Gt0pN9CR/okay4.png",
+                  role: "Remote Worker",
+                  description: "Monitor expenses and cash flow for your personal projects."
+                }
+              ].map(({ image, role, description }) => (
+                <div key={role} className="group relative rounded-3xl overflow-hidden shadow-lg hover:shadow-[#2f68b4]/60 transition-shadow duration-300 border border-[#2f68b4]/30">
+                  <img src={image} alt={role} className="w-full h-64 object-cover opacity-70 group-hover:opacity-90 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0f1116] via-[#0f1116]/90 to-transparent p-6 flex flex-col justify-end">
+                    <h3 className="text-2xl font-semibold text-white mb-2">{role}</h3>
+                    <p className="text-gray-300">{description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Us Section */}
+        <section className="relative py-24">
+          <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 text-center relative z-10">
+            <h2 className="text-4xl font-extrabold text-white mb-10">
+              Why Choose PAYZIO?
+            </h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-16">
+              Built with self-employed professionals in mind, our platform combines simplicity with powerful features.
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+              {[
+                {
+                  icon: Zap,
+                  title: "Built for Speed",
+                  description: "Streamlined workflows and intuitive design help you manage finances in minutes, not hours."
+                },
+                {
+                  icon: Users,
+                  title: "Self-Employed First",
+                  description: "Every feature is tailored for independent professionals, because we understand your unique needs."
+                },
+                {
+                  icon: Sparkles,
+                  title: "Grows With You",
+                  description: "From solo freelancer to small business owner, our platform scales seamlessly as your business expands."
+                }
+              ].map(({ icon: Icon, title, description }) => (
+                <div key={title} className="bg-[#1a1f2e] rounded-3xl p-10 shadow-lg hover:shadow-[#2f68b4]/70 transition-shadow duration-300 border border-[#2f68b4]/30 cursor-default">
+                  <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#4facfe] to-[#00f2fe] flex items-center justify-center shadow-md">
+                    <Icon className="w-10 h-10 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-white mb-4">{title}</h3>
+                  <p className="text-gray-300">{description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="relative py-24 bg-[#0f1116]">
+          <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-10">
+            <h2 className="text-4xl font-extrabold text-white mb-10 text-center">
+              Frequently Asked Questions
+            </h2>
+
+            <div className="space-y-6">
+              {faqs.map(({ question, answer }, i) => {
+                const isOpen = openFaq === i;
+                return (
+                  <div
+                    key={i}
+                    className={`rounded-3xl border border-indigo-700/30 bg-[#1a1f2e]/80 backdrop-blur-md shadow-lg overflow-hidden transition-all duration-300`}
+                  >
+                    <button
+                      onClick={() => toggleFaq(i)}
+                      className="w-full flex justify-between items-center px-8 py-5 text-left text-lg font-semibold text-white hover:bg-indigo-700/20 transition-colors focus:outline-none"
+                      aria-expanded={isOpen}
+                    >
+                      {question}
+                      <ChevronDown
+                        className={`w-6 h-6 text-indigo-400 transition-transform duration-300 ${
+                          isOpen ? 'rotate-180' : ''
+                        }`}
+                      />
+                    </button>
+                    <div
+                      className={`px-8 pb-8 text-gray-300 text-base transition-max-height duration-300 ease-in-out overflow-hidden ${
+                        isOpen ? 'max-h-96 pt-0' : 'max-h-0 pt-0'
+                      }`}
+                      aria-hidden={!isOpen}
+                    >
+                      <p>{answer}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+}

@@ -258,3 +258,4 @@ export default function Cookies() {
     {modalContent.content}
   </Modal>
 </div>
+    </>

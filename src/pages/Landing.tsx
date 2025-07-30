@@ -255,12 +255,12 @@ export default function Landing() {
 
 {/* Features Section */}
 <div className="relative py-24 overflow-hidden bg-[#0F1116]">
-  {/* Small Blue Gradient Blobs */}
-  <div className="fixed inset-0 pointer-events-none z-0">
-    <div className="absolute top-10 left-10 w-32 h-32 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 opacity-20 blur-3xl" />
-    <div className="absolute top-1/2 right-12 w-24 h-24 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 opacity-30 blur-2xl" />
-    <div className="absolute bottom-16 left-1/3 w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 opacity-25 blur-2xl" />
-    <div className="absolute bottom-20 right-1/4 w-28 h-28 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 opacity-15 blur-3xl" />
+  {/* Decorative Blobs */}
+  <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+    <div className="absolute top-10 left-[10%] w-[180px] h-[180px] bg-blue-500 rounded-full filter blur-3xl opacity-30" />
+    <div className="absolute top-[30%] right-[15%] w-[140px] h-[140px] bg-blue-500 rounded-full filter blur-2xl opacity-25" />
+    <div className="absolute bottom-[20%] left-[40%] w-[120px] h-[120px] bg-cyan-500 rounded-full filter blur-2xl opacity-20" />
+    <div className="absolute bottom-[10%] right-[5%] w-[160px] h-[160px] bg-blue-500 rounded-full filter blur-3xl opacity-30" />
   </div>
 
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

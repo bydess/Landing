@@ -120,7 +120,7 @@ export default function Pricing() {
             </p>
             <button
               onClick={() => handleExternalLink('https://app.payzio.io/auth')}
-              className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-full font-semibold text-lg shadow-md hover:opacity-90 transition-all flex items-center justify-center"
+              className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-full font-semibold text-lg shadow-md hover:opacity-90 transition-all inline-flex items-center"
             >
               Start My Trial <ArrowRight className="w-5 h-5 ml-2" />
             </button>

@@ -458,62 +458,69 @@ export default function Landing() {
 </div>
 
 
-      {/* FAQ Section */}
-      <div className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 blur-effect bg-[#1a1d25]/50" />
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-lg text-gray-300">
-              Find answers to common questions about Payzio
-            </p>
-          </div>
+     {/* FAQ Section */}
+ <div className="relative pt-32 pb-20 bg-[#0F1116] overflow-hidden text-white">
+  {/* Blobs */}
+  <div className="absolute inset-0 pointer-events-none -z-10">
+    <div className="absolute top-16 left-1/4 w-48 h-48 rounded-full bg-gradient-to-tr from-blue-500 via-cyan-400 to-blue-400 filter blur-3xl opacity-20 animate-float" />
+    <div className="absolute top-1/2 right-1/3 w-36 h-36 rounded-full bg-gradient-to-br from-cyan-500 via-blue-500 to-cyan-400 filter blur-2xl opacity-25 animate-float-slow" />
+    <div className="absolute bottom-16 left-1/3 w-44 h-44 rounded-full bg-gradient-to-tr from-blue-400 via-cyan-400 to-blue-500 filter blur-3xl opacity-15 animate-float-reverse" />
+  </div>
 
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="blur-effect bg-[#1a1d25]/50 rounded-xl border border-[#2f68b4]/20 overflow-hidden transition-all duration-300"
-              >
-                <button
-                  onClick={() => toggleFaq(index)}
-                  className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-[#2f68b4]/10 transition-colors"
-                >
-                  <span className="text-white font-medium">{faq.question}</span>
-                  <ChevronDown
-                    className={`w-5 h-5 text-[#2f68b4] transition-transform duration-300 ${
-                      openFaq === index ? 'rotate-180' : ''
-                    }`}
-                  />
-                </button>
-                <div
-                  className={`px-6 transition-all duration-300 ${
-                    openFaq === index ? 'py-4' : 'h-0 overflow-hidden'
-                  }`}
-                >
-                  <p className="text-gray-300">{faq.answer}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        Frequently Asked Questions
+      </h2>
+      <p className="text-lg text-gray-300">
+        Find answers to common questions about Payzio
+      </p>
+    </div>
 
-          <div className="mt-12 text-center">
-            <div className="inline-flex flex-col items-center">
-              <p className="text-gray-300 mb-4">Still have questions?</p>
-              <button
-                onClick={() => handleExternalLink('mailto:support@payzio.io')}
-                className="group bg-[#1a1d25] text-white px-8 py-3 rounded-lg font-semibold border border-[#2f68b4]/20 hover:bg-[#2f68b4]/10 transition-all duration-300 inline-flex items-center"
-              >
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Contact Support
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </button>
-            </div>
+    <div className="space-y-4">
+      {faqs.map((faq, index) => (
+        <div
+          key={index}
+          className="blur-effect bg-[#1a1d25]/70 rounded-xl border border-blue-500/30 overflow-hidden transition-all duration-300"
+        >
+          <button
+            onClick={() => toggleFaq(index)}
+            className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-blue-500/10 transition-colors rounded-full"
+          >
+            <span className="text-white font-medium">{faq.question}</span>
+            <ChevronDown
+              className={`w-5 h-5 text-blue-500 transition-transform duration-300 ${
+                openFaq === index ? 'rotate-180' : ''
+              }`}
+            />
+          </button>
+          <div
+            className={`px-6 transition-all duration-300 ${
+              openFaq === index ? 'py-4' : 'h-0 overflow-hidden'
+            }`}
+          >
+            <p className="text-gray-300">{faq.answer}</p>
           </div>
         </div>
+      ))}
+    </div>
+
+    <div className="mt-12 text-center">
+      <div className="inline-flex flex-col items-center">
+        <p className="text-gray-300 mb-4">Still have questions?</p>
+        <button
+          onClick={() => handleExternalLink('mailto:support@payzio.io')}
+          className="group bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:opacity-90 transition-all duration-300 inline-flex items-center"
+        >
+          <MessageCircle className="w-5 h-5 mr-2" />
+          Contact Support
+          <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+        </button>
       </div>
+    </div>
+  </div>
+</div>
+
 
       {/* Final CTA Section */}
       <div className="relative py-24 overflow-hidden">

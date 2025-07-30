@@ -552,5 +552,7 @@ export default function Landing() {
       No hidden fees • 7 days for free • Cancel anytime
     </p>
   </div>
+</div>
+    </div>
   );
 }

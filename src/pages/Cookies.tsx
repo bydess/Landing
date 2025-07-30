@@ -187,171 +187,74 @@ export default function Cookies() {
           }
         }}
       />
-    <div className="min-h-screen bg-[#0F1116] relative overflow-hidden pt-32">
-      {/* Background Gradient Blurs */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-[400px] h-[400px] gradient-blur opacity-30" />
-        <div className="absolute top-1/3 right-1/4 w-[300px] h-[300px] gradient-blur opacity-20" />
-        <div className="absolute bottom-1/4 left-1/3 w-[350px] h-[350px] gradient-blur opacity-25" />
+<div className="relative pt-32 pb-20 bg-[#0F1116] overflow-hidden text-white">
+  {/* Blobs */}
+  <div className="absolute inset-0 pointer-events-none -z-10">
+    <div className="absolute top-1/3 left-1/4 w-48 h-48 rounded-full bg-gradient-to-tr from-blue-500 via-cyan-400 to-blue-400 filter blur-3xl opacity-20 animate-float" />
+    <div className="absolute top-1/2 right-1/4 w-56 h-56 rounded-full bg-gradient-to-br from-cyan-500 via-blue-500 to-cyan-400 filter blur-2xl opacity-25 animate-float-slow" />
+    <div className="absolute bottom-20 left-1/3 w-52 h-52 rounded-full bg-gradient-to-tr from-blue-400 via-cyan-400 to-blue-500 filter blur-3xl opacity-15 animate-float-reverse" />
+  </div>
+
+  {/* Cookie Policy Header */}
+  <section className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto mb-16">
+    <div className="flex justify-center mb-6">
+      <div className="bg-[#2f68b4]/10 p-4 rounded-full">
+        <Cookie className="w-12 h-12 text-[#2f68b4]" />
       </div>
-
-      {/* Introduction Section */}
-      <section className="relative z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="flex justify-center mb-6">
-              <div className="bg-[#2f68b4]/10 p-4 rounded-full">
-                <Cookie className="w-12 h-12 text-[#2f68b4]" />
-              </div>
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Cookie Policy
-            </h1>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Understanding how we use cookies to improve your experience
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Main Cookie Policy Sections */}
-      <section className="relative py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Shield,
-                title: "Essential Cookies",
-                description: "Necessary for basic website functionality",
-                content: (
-                  <div className="space-y-4">
-                    <h3 className="text-lg font-semibold text-white">Essential Cookies</h3>
-                    <ul className="list-disc pl-5 text-gray-300 space-y-2">
-                      <li>Authentication and security</li>
-                      <li>Session management</li>
-                      <li>Core functionality</li>
-                    </ul>
-                  </div>
-                )
-              },
-              {
-                icon: Settings,
-                title: "Functional Cookies",
-                description: "Remember your preferences and settings",
-                content: (
-                  <div className="space-y-4">
-                    <h3 className="text-lg font-semibold text-white">Functional Cookies</h3>
-                    <ul className="list-disc pl-5 text-gray-300 space-y-2">
-                      <li>Language preferences</li>
-                      <li>User interface customization</li>
-                      <li>Saved settings</li>
-                    </ul>
-                  </div>
-                )
-              },
-              {
-                icon: BarChart,
-                title: "Analytics Cookies",
-                description: "Help us improve our services",
-                content: (
-                  <div className="space-y-4">
-                    <h3 className="text-lg font-semibold text-white">Analytics Cookies</h3>
-                    <ul className="list-disc pl-5 text-gray-300 space-y-2">
-                      <li>Usage patterns</li>
-                      <li>Performance metrics</li>
-                      <li>User behavior analysis</li>
-                    </ul>
-                  </div>
-                )
-              },
-              {
-                icon: Clock,
-                title: "Cookie Duration",
-                description: "How long cookies stay on your device",
-                content: (
-                  <div className="space-y-4">
-                    <h3 className="text-lg font-semibold text-white">Cookie Lifespan</h3>
-                    <ul className="list-disc pl-5 text-gray-300 space-y-2">
-                      <li>Session cookies</li>
-                      <li>Persistent cookies</li>
-                      <li>Expiration periods</li>
-                    </ul>
-                  </div>
-                )
-              },
-              {
-                icon: Globe,
-                title: "Third-Party Cookies",
-                description: "Cookies from our trusted partners",
-                content: (
-                  <div className="space-y-4">
-                    <h3 className="text-lg font-semibold text-white">Third-Party Usage</h3>
-                    <ul className="list-disc pl-5 text-gray-300 space-y-2">
-                      <li>Analytics providers</li>
-                      <li>Marketing services</li>
-                      <li>Social media integration</li>
-                    </ul>
-                  </div>
-                )
-              },
-              {
-                icon: Settings,
-                title: "Cookie Management",
-                description: "Control your cookie preferences",
-                content: (
-                  <div className="space-y-4">
-                    <h3 className="text-lg font-semibold text-white">Managing Cookies</h3>
-                    <ul className="list-disc pl-5 text-gray-300 space-y-2">
-                      <li>Browser settings</li>
-                      <li>Opt-out options</li>
-                      <li>Privacy controls</li>
-                    </ul>
-                  </div>
-                )
-              }
-            ].map(({ icon: Icon, title, description, content }) => (
-              <div 
-                key={title}
-                className="blur-effect bg-[#1a1d25]/50 rounded-xl p-8 border border-[#2f68b4]/20 glow card-hover cursor-pointer"
-                onClick={() => openModal(title, content)}
-              >
-                <div className="bg-[#2f68b4]/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                  <Icon className="w-8 h-8 text-[#2f68b4]" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{title}</h3>
-                <p className="text-gray-300">{description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* View Complete Cookie Policy Button */}
-      <section className="relative py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <button
-              onClick={() => openModal("Complete Cookie Policy", fullCookiePolicyContent)}
-             className="group bg-[#1a1d25] text-white px-8 py-3 rounded-lg font-semibold text-lg border border-[#2f68b4]/20 hover:bg-[#2f68b4]/10 transition-all duration-300 inline-flex items-center"
-            >
-              View Complete Cookie Policy
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </button>
-          </div>
-        </div>
-      </section>
-
-
-
-      {/* Modal */}
-      <Modal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        title={modalContent.title}
-      >
-        {modalContent.content}
-      </Modal>
     </div>
-    </>
-  );
-}
+    <h1 className="text-4xl md:text-5xl font-bold mb-6">
+      Cookie Policy
+    </h1>
+    <p className="text-xl text-gray-300">
+      Understanding how we use cookies to improve your experience
+    </p>
+  </section>
+
+  {/* Cards Section */}
+  <section className="relative z-10 py-12">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {[
+          { icon: Shield, title: 'Essential Cookies', description: 'Necessary for basic website functionality' },
+          { icon: Settings, title: 'Functional Cookies', description: 'Remember your preferences and settings' },
+          { icon: BarChart, title: 'Analytics Cookies', description: 'Help us improve our services' },
+          { icon: Clock, title: 'Cookie Duration', description: 'How long cookies stay on your device' },
+          { icon: Globe, title: 'Third-Party Cookies', description: 'Cookies from our trusted partners' },
+          { icon: Settings, title: 'Cookie Management', description: 'Control your cookie preferences' }
+        ].map(({ icon: Icon, title, description }) => (
+          <div
+            key={title}
+            className="bg-[#1a1d25]/50 border border-[#2f68b4]/20 rounded-xl p-8 blur-effect glow hover:shadow-xl transition-all cursor-pointer"
+            onClick={() => openModal(title, fullCookiePolicyContent)}
+          >
+            <div className="bg-[#2f68b4]/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+              <Icon className="w-8 h-8 text-[#2f68b4]" />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
+            <p className="text-gray-300">{description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* Pill CTA Button */}
+  <section className="relative z-10 py-12 text-center">
+    <button
+      onClick={() => openModal('Complete Cookie Policy', fullCookiePolicyContent)}
+      className="group bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-full font-semibold text-lg shadow-lg hover:opacity-90 transition-all duration-300 inline-flex items-center"
+    >
+      View Complete Cookie Policy
+      <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+    </button>
+  </section>
+
+  {/* Modal */}
+  <Modal
+    isOpen={isModalOpen}
+    onClose={() => setIsModalOpen(false)}
+    title={modalContent.title}
+  >
+    {modalContent.content}
+  </Modal>
+</div>

@@ -253,63 +253,77 @@ export default function Landing() {
 </div>
 
 
-      {/* Features Section */}
-      <div className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 blur-effect bg-[#1a1d25]/50" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Everything You Need to Succeed
-            </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Powerful features designed to help you manage your business finances with ease
-            </p>
-          </div>
+{/* Features Section */}
+<div className="relative py-24 overflow-hidden bg-[#0F1116]">
+  {/* Small Blue Gradient Blobs */}
+  <div className="fixed inset-0 pointer-events-none z-0">
+    <div className="absolute top-10 left-10 w-32 h-32 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 opacity-20 blur-3xl" />
+    <div className="absolute top-1/2 right-12 w-24 h-24 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 opacity-30 blur-2xl" />
+    <div className="absolute bottom-16 left-1/3 w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 opacity-25 blur-2xl" />
+    <div className="absolute bottom-20 right-1/4 w-28 h-28 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 opacity-15 blur-3xl" />
+  </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Receipt,
-                title: "Smart Invoice Creation",
-                description: "Create professional invoices in seconds and track payments."
-              },
-              {
-                icon: Calculator,
-                title: "Expense Management",
-                description: "Log and categorize expenses for easy budgeting and tax preparation."
-              },
-              {
-                icon: FileText,
-                title: "Accountant-Ready Exports",
-                description: "Export financial data in CSV for your accountant easily."
-              },
-              {
-                icon: DollarSign,
-                title: "Self-Payment Tracking",
-                description: "Record and monitor your business income withdrawals accurately."
-              },
-              {
-                icon: Car,
-                title: "Vehicle & Mileage Tracking",
-                description: "Track business mileage and calculate vehicle depreciation for tax deductions."
-              },
-              {
-                icon: Clock,
-                title: "Time Savings",
-                description: "Save time with entries and focus on what matters most, growing your business."
-              }
-            ].map(({ icon: Icon, title, description }) => (
-              <div key={title} className="blur-effect bg-[#1a1d25]/50 rounded-xl p-8 glow card-hover border border-[#2f68b4]/20">
-                <div className="bg-[#2f68b4]/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                  <Icon className="w-8 h-8 text-[#2f68b4]" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{title}</h3>
-                <p className="text-gray-300 leading-relaxed">{description}</p>
-              </div>
-            ))}
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        Everything You Need to Succeed
+      </h2>
+      <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+        Powerful features designed to help you manage your business finances with ease
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {[
+        {
+          icon: Receipt,
+          title: "Smart Invoice Creation",
+          description: "Create professional invoices in seconds and track payments."
+        },
+        {
+          icon: Calculator,
+          title: "Expense Management",
+          description: "Log and categorize expenses for easy budgeting and tax preparation."
+        },
+        {
+          icon: FileText,
+          title: "Accountant-Ready Exports",
+          description: "Export financial data in CSV for your accountant easily."
+        },
+        {
+          icon: DollarSign,
+          title: "Self-Payment Tracking",
+          description: "Record and monitor your business income withdrawals accurately."
+        },
+        {
+          icon: Car,
+          title: "Vehicle & Mileage Tracking",
+          description: "Track business mileage and calculate vehicle depreciation for tax deductions."
+        },
+        {
+          icon: Clock,
+          title: "Time Savings",
+          description: "Save time with entries and focus on what matters most, growing your business."
+        }
+      ].map(({ icon: Icon, title, description }) => (
+        <div
+          key={title}
+          className="bg-[#1a1d25]/50 backdrop-blur-md rounded-xl p-8 border border-blue-500/20 transition-all duration-300 hover:scale-[1.02]"
+        >
+          <div className="bg-blue-500/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+            <Icon className="w-8 h-8 text-blue-500" />
           </div>
+          <h3 className="text-xl font-semibold text-white mb-4">{title}</h3>
+          <p className="text-gray-300 leading-relaxed">{description}</p>
+          <button className="mt-6 px-6 py-2 rounded-full text-white bg-gradient-to-r from-blue-500 to-cyan-500 hover:opacity-90 transition">
+            Learn More
+          </button>
         </div>
-      </div>
+      ))}
+    </div>
+  </div>
+</div>
+
 
       {/* Job Roles Section */}
       <div className="relative py-24 overflow-hidden">

@@ -48,14 +48,14 @@ export function LandingNav() {
 
           <div className="hidden md:flex items-center space-x-4">
             <button
-              onClick={() => handleExternalLink('https://app.payzio.io/login')}
+              onClick={() => handleExternalLink('https://app.payzio.io/auth')}
               className="text-gray-300 hover:text-white transition-colors font-medium focus:outline-none"
             >
               Login
             </button>
 
             <button
-              onClick={() => handleExternalLink('https://app.payzio.io/signup')}
+              onClick={() => handleExternalLink('https://app.payzio.io/auth')}
               className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 py-2 rounded-full font-semibold shadow-md hover:opacity-90 transition-all duration-300 focus:outline-none flex items-center justify-center"
             >
               Get Started
@@ -88,13 +88,13 @@ export function LandingNav() {
               })}
               <hr className="my-2 border-blue-500/30" />
               <button
-                onClick={() => handleExternalLink('https://app.payzio.io/login')}
+                onClick={() => handleExternalLink('https://app.payzio.io/auth')}
                 className="block w-full text-left px-4 py-3 text-gray-300 hover:text-white hover:bg-blue-500/10 transition-colors font-medium focus:outline-none"
               >
                 Login
               </button>
               <button
-                onClick={() => handleExternalLink('https://app.payzio.io/signup')}
+                onClick={() => handleExternalLink('https://app.payzio.io/auth')}
                 className="block w-full text-left px-4 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-full font-semibold shadow-md hover:opacity-90 transition-all duration-300 focus:outline-none"
               >
                 Get Started
